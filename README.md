@@ -5,3 +5,7 @@
 <br/>
 
 # <p align="center">CS8 Assignment Links</p>
+
+## Labs
+
+- [`00_lab_0`](assignments/00_lab_0/)
