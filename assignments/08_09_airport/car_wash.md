@@ -48,15 +48,23 @@ void washer::one_second();
 2. 
 for (current_second = 1; current_second <= the simulation length; ++current_second) 
 {
+
     Each iteration of this loop simulates the passage of one second of time, as follows: Ask the *bool_source* whether a new customer arrives during this second, and
+
     if so, enter the *current_second* into the queue.
+
     if (the *washer* is not busy and the queue is not empty)
+
     {
+
         Remove the next integer from the queue, and call this integer next.
-        This integer is the arrival time of the customer whose car we will now wash. So, compute how long the customer had to wait (*current_second - next*), and send this value to the *averager*. Also, tell the *washer* that it should
-        start washing another car.
+
+        This integer is the arrival time of the customer whose car we will now wash. So, compute how long the customer had to wait (*current_second - next*), and send this value to the *averager*. Also, tell the *washer* that it should start washing another car.
+
     }
+
     Indicate to the *washer* that another simulated second has passed. This allows the washer to correctly determine whether it is still busy.
+
 }
 
 3. At this point, the simulation is completed. So we can get and print two items of information from the averager: (1) how many numbers the averager was given (i.e., the number of customers whose cars were washed); and (2) the average of all the numbers that it was given (i.e., the average waiting time for the customers, expressed in seconds).
@@ -117,7 +125,7 @@ Notice that the argument to *next_number* is actually a double number rather tha
 
 `rand() < probability * RAND_MAX`
 
-For example, suppose we want a 10% chance that query returns true, so that *probability* is 0.1. If rand returns a value less than 0.1\**RAND_MAX*, then query will return true. The chance that rand returns a value less than 0.1\**RAND_MAX* is approximately 10%, since 0.1**RAND_MAX* marks a point that is approximately 10% of the way through rand’s output range. Therefore, there is about a 10% chance that the expression `rand() < 0.1 * RAND_MAX` will be true. It is this boolean expression that is used in the return statement of query.
+For example, suppose we want a 10% chance that query returns true, so that *probability* is 0.1. If rand returns a value less than 0.1\**RAND_MAX*, then query will return true. The chance that rand returns a value less than 0.1\**RAND_MAX* is approximately 10%, since 0.1\**RAND_MAX* marks a point that is approximately 10% of the way through rand’s output range. Therefore, there is about a 10% chance that the expression `rand() < 0.1 * RAND_MAX` will be true. It is this boolean expression that is used in the return statement of query.
 
 **Implementation of the averager**. The implementation of the averager is a direct implementation of the definition of "average" and some straightforward details. The class has two member variables: one to keep track of how many numbers the averager has been given, and another to keep track of the sum of all those numbers. When the average member function is activated, the function returns the average calculated as the sum of all the numbers divided by the count of how many numbers the averager was given.
 
