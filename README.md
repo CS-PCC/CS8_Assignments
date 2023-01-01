@@ -16,4 +16,5 @@
 
 - [`08_01_doubly_linkedlist`](assignments/08_01_doubly_linkedlist/)
 - [`08_09_airport`](assignments/08_09_airport/)
+- [`08_15_linked_list_cycle`](assignments/08_15_linked_list_cycle/)
 
