@@ -6,6 +6,14 @@
 
 # <p align="center">CS8 Assignment Links</p>
 
+
 ## Labs
 
 - [`00_lab_0`](assignments/00_lab_0/)
+
+
+## Chapter 5, 7, 8: Linked Lists, Stacks, Queues
+
+- [`08_01_doubly_linkedlist`](assignments/08_01_doubly_linkedlist/)
+- [`08_09_airport`](assignments/08_09_airport/)
+
