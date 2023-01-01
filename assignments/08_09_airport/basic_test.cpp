@@ -27,7 +27,7 @@ bool test_airport(bool debug = false)
   cout<<endl<<endl<<"============================================"<<endl<<endl;
   for (int i=0; i<simulations; i++)
   {
-    cout << endl << "----------------- [" << i + 1 << "] ----------------------" << endl;
+    cout << endl << "------------------- [" << i + 1 << "] --------------------" << endl;
     simulate_airport(debug);
   }
   cout <<endl<<endl<< "============================================" << endl;
