@@ -18,3 +18,7 @@
 - [`08_09_airport`](assignments/08_09_airport/)
 - [`08_15_linked_list_cycle`](assignments/08_15_linked_list_cycle/)
 
+## Chapter 9: Recursion
+
+- [`09_17_binary_search`](assignments/09_17_binary_search/)
+
