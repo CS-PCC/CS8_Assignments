@@ -20,5 +20,5 @@
 
 ## Chapter 9: Recursion
 
-- [`09_17_binary_search`](assignments/09_17_binary_search/)
+- [`12_09_binary_search`](assignments/12_09_binary_search/)
 
