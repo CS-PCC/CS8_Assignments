@@ -24,4 +24,4 @@
 
 ## Chapter 10: Trees
 
-- [10_02_binary_tree](assignments/10_02_binary_tree/)
+- [`10_02_binary_tree`](assignments/10_02_binary_tree/)
