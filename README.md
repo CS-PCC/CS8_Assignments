@@ -22,3 +22,6 @@
 
 - [`12_09_binary_search`](assignments/12_09_binary_search/)
 
+## Chapter 10: Trees
+
+- [10_02_binary_tree](assignments/10_02_binary_tree/)
