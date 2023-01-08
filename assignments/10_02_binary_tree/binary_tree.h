@@ -143,22 +143,22 @@ public:
   // CONSTRUCTOR
   binary_tree_node(
     const Item& init_data = Item(),
-    binary_tree_node* init_left = NULL,
-    binary_tree_node* init_right = NULL
+    binary_tree_node<Item>* init_left = nullptr,
+    binary_tree_node<Item>* init_right = nullptr
   );
   // MODIFICATION MEMBER FUNCTIONS
   Item& data();
-  binary_tree_node* left();
-  binary_tree_node* right();
+  binary_tree_node<Item>* left();
+  binary_tree_node<Item>* right();
   void set_data(const Item& new_data);
-  void set_left(binary_tree_node* new_left);
-  void set_right(binary_tree_node* new_right);
+  void set_left(binary_tree_node<Item>* new_left);
+  void set_right(binary_tree_node<Item>* new_right);
   int balance_factor();
   int update_height();
   // CONST MEMBER FUNCTIONS
   const Item& data() const;
-  const binary_tree_node* left() const;
-  const binary_tree_node* right() const;
+  const binary_tree_node<Item>* left() const;
+  const binary_tree_node<Item>* right() const;
   bool is_leaf() const;
   const int height();
   // OVERLOAD OPERATOR FUNCTIONS
@@ -166,8 +166,8 @@ public:
   friend std::ostream& operator << (std::ostream& outs, const binary_tree_node<U>& tree_node);
 private:
   Item data_field;
-  binary_tree_node *left_field;
-  binary_tree_node *right_field;
+  binary_tree_node<Item> *left_field;
+  binary_tree_node<Item> *right_field;
   int tree_height;
 };
 
@@ -194,8 +194,8 @@ void tree_clear(binary_tree_node<Item>*& root_ptr);
 template <class Item>
 binary_tree_node<Item>* tree_copy(const binary_tree_node<Item>* root_ptr);
 
-template <class U>
-std::size_t tree_size(const binary_tree_node<U>* node_ptr);
+template <class Item>
+std::size_t tree_size(const binary_tree_node<Item>* node_ptr);
 
 
 // Implementation MEMBER FUNCTIONS
