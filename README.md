@@ -25,3 +25,4 @@
 ## Chapter 10: Trees
 
 - [`10_02_binary_tree`](assignments/10_02_binary_tree/)
+- [`10_08_binary_search_tree`](assignments/10_08_binary_search_tree/)
