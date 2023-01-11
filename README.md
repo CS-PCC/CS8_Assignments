@@ -26,3 +26,4 @@
 
 - [`10_02_binary_tree`](assignments/10_02_binary_tree/)
 - [`10_08_binary_search_tree`](assignments/10_08_binary_search_tree/)
+- [`10_15_avl_tree`](assignments/10_15_avl_tree/)
