@@ -15,6 +15,8 @@ A priority queue is a structure that keeps the largest element handy so that whe
 
 ## The info struct
 
+The templated info struct is the data to be saved in priority queue. You need to overload the comparison operators: less than and the greater than.
+
 ```cpp
 template <typename T>
 struct info
@@ -39,6 +41,10 @@ struct info
 ```
 
 ## The PQueue class
+
+Priority queue use a heap to be the underlie data structure with the templated info structure.
+
+The PQueue class functions rely on Heap class.
 
 ```cpp
 template <typename T>
@@ -65,3 +71,15 @@ private:
   Heap<info<T>> _heap;
 };
 ```
+
+Using a random generating function push 100 elements into the queue and then pop and print them. The items should show print in descending order of info priority:
+
+```cpp
+PQueue<int> pq;
+for (int i = 0; i<100; i++)
+{
+  pq.insert(Random(1,1000), Random(1,10));
+}
+```
+
+As you see, the user end (test program) knows nothing of the info structure.
