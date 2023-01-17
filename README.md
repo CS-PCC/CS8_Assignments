@@ -35,3 +35,5 @@
 ## Chapter 11: Heaps
 
 - [`11_02_heap`](assignments/11_02_heap/)
+- [`11_06_priority_queue`](assignments/11_06_priority_queue/)
+
