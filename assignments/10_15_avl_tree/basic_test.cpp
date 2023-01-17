@@ -91,17 +91,13 @@ int main(int argc, char **argv)
 
 
 /*
-
-build git:(master) ✗  😊 $> tree ../includes
-../includes
+includes
 ├── avl_tree
 │   └── avl_tree.h
 └── binary_tree
     └── binary_tree.h
 
 2 directories, 2 files
-build git:(master) ✗  😊 $> ./bin/basic_test
-
 
 ----------running basic_test.cpp---------
 

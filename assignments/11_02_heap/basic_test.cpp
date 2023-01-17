@@ -92,14 +92,11 @@ int main(int argc, char **argv)
 }
 
 /*
-build git:(master) ✗  😊 $> tree ../includes
-../includes
+includes
 └── heap
     └── heap.h
 
-1 directory, 2 files
-build git:(master) ✗  😊 $> ./bin/basic_test
-
+1 directory, 1 file
 
 ----------running basic_test.cpp---------
 

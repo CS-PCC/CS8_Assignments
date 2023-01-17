@@ -55,8 +55,6 @@ int main(int argc, char **argv)
 
 
 /*
-
-08-airport git:(master) ✗  😊 $> tr includes
 includes
 ├── airport
 │   └── airport.h
@@ -68,9 +66,8 @@ includes
 │   └── queue.h
 └── stack
     └── stack.h
-5 directories, 0 files
-08-airport git:(master) ✗  😊 $> ./build/bin/basic_test
 
+5 directories, 5 files
 
 ----------running basic_test.cpp---------
 

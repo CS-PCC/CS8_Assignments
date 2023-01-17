@@ -63,8 +63,6 @@ int main(int argc, char **argv)
 
 
 /*
-<pre>
-00_lab_0 git:(master) ✗  😊 $> tree includes 
 includes
 └── array_functions
 │   ├── array_functions.cpp
@@ -72,9 +70,9 @@ includes
 └── stub
     ├── stub.cpp
     └── stub.h
+
 2 directories, 4 files
 
-00_lab_0 git:(master) ✗  😊 $> ./build/bin/basic_test
 ----------running basic_test.cpp---------
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
