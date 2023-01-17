@@ -20,7 +20,7 @@ public:
   Heap& operator = (const Heap& x);   //Assigns new contents to the container, replacing its current contents, and modifying its size accordingly.
   // MODIFICATION MEMBER FUNCTIONS
   void insert(const Item& insert_me); //insert into the heap
-  Item remove();                      //remove and return top value 
+  void remove();                      //remove top value 
   Item top()                          //return the value at the top of heap
   // CONST MEMBER FUNCTIONS
   bool is_empty() const;

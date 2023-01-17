@@ -57,7 +57,8 @@ bool test_heap(bool debug=false)
   cout << endl << LINE << endl << "Test pop()" << endl << LINE << endl;
   while (!heap.is_empty())
   {
-    cout << "removed:  " << heap.remove() << endl;
+    cout << "removed: " << heap.top() << endl;
+    heap.remove();
     if(heap.is_empty())
       cout << "tree is now empty." << endl;
     else
@@ -147,7 +148,7 @@ Test pop()
 
 --------------------------------------------------
 
-removed:  86
+removed: 86
 top of the heap: 82
 number of elements on the heap: 20
 the tree is valid
@@ -176,7 +177,7 @@ the new tree:
 
 ..................................................
 
-removed:  82
+removed: 82
 top of the heap: 73
 number of elements on the heap: 19
 the tree is valid
@@ -204,7 +205,7 @@ the new tree:
 
 ..................................................
 
-removed:  73
+removed: 73
 top of the heap: 73
 number of elements on the heap: 18
 the tree is valid
@@ -231,7 +232,7 @@ the new tree:
 
 ..................................................
 
-removed:  73
+removed: 73
 top of the heap: 72
 number of elements on the heap: 17
 the tree is valid
@@ -257,7 +258,7 @@ the new tree:
 
 ..................................................
 
-removed:  72
+removed: 72
 top of the heap: 72
 number of elements on the heap: 16
 the tree is valid
@@ -282,7 +283,7 @@ the new tree:
 
 ..................................................
 
-removed:  72
+removed: 72
 top of the heap: 67
 number of elements on the heap: 15
 the tree is valid
@@ -306,7 +307,7 @@ the new tree:
 
 ..................................................
 
-removed:  67
+removed: 67
 top of the heap: 66
 number of elements on the heap: 14
 the tree is valid
@@ -329,7 +330,7 @@ the new tree:
 
 ..................................................
 
-removed:  66
+removed: 66
 top of the heap: 65
 number of elements on the heap: 13
 the tree is valid
@@ -351,7 +352,7 @@ the new tree:
 
 ..................................................
 
-removed:  65
+removed: 65
 top of the heap: 65
 number of elements on the heap: 12
 the tree is valid
@@ -372,7 +373,7 @@ the new tree:
 
 ..................................................
 
-removed:  65
+removed: 65
 top of the heap: 54
 number of elements on the heap: 11
 the tree is valid
@@ -392,7 +393,7 @@ the new tree:
 
 ..................................................
 
-removed:  54
+removed: 54
 top of the heap: 42
 number of elements on the heap: 10
 the tree is valid
@@ -411,7 +412,7 @@ the new tree:
 
 ..................................................
 
-removed:  42
+removed: 42
 top of the heap: 41
 number of elements on the heap: 9
 the tree is valid
@@ -429,7 +430,7 @@ the new tree:
 
 ..................................................
 
-removed:  41
+removed: 41
 top of the heap: 40
 number of elements on the heap: 8
 the tree is valid
@@ -446,7 +447,7 @@ the new tree:
 
 ..................................................
 
-removed:  40
+removed: 40
 top of the heap: 39
 number of elements on the heap: 7
 the tree is valid
@@ -462,7 +463,7 @@ the new tree:
 
 ..................................................
 
-removed:  39
+removed: 39
 top of the heap: 36
 number of elements on the heap: 6
 the tree is valid
@@ -477,7 +478,7 @@ the new tree:
 
 ..................................................
 
-removed:  36
+removed: 36
 top of the heap: 33
 number of elements on the heap: 5
 the tree is valid
@@ -491,7 +492,7 @@ the new tree:
 
 ..................................................
 
-removed:  33
+removed: 33
 top of the heap: 32
 number of elements on the heap: 4
 the tree is valid
@@ -504,7 +505,7 @@ the new tree:
 
 ..................................................
 
-removed:  32
+removed: 32
 top of the heap: 31
 number of elements on the heap: 3
 the tree is valid
@@ -516,7 +517,7 @@ the new tree:
 
 ..................................................
 
-removed:  31
+removed: 31
 top of the heap: 28
 number of elements on the heap: 2
 the tree is valid
@@ -527,7 +528,7 @@ the new tree:
 
 ..................................................
 
-removed:  28
+removed: 28
 top of the heap: 21
 number of elements on the heap: 1
 the tree is valid
@@ -537,7 +538,7 @@ the new tree:
 
 ..................................................
 
-removed:  21
+removed: 21
 tree is now empty.
 number of elements on the heap: 0
 the tree is valid
