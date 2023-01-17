@@ -250,9 +250,13 @@ int main(int argc, char **argv)
 08_01 git:(master) ✗  😊 $> tr includes 
 includes
 ├── linked_list_functions
+│   └── linked_list_functions.h
 ├── node
+│   └── node.h
 ├── queue
+│   └── queue.h
 └── stack
+    └── stack.h
 4 directories, 0 files
 08_01 git:(master) ✗  😊 $> build/bin/basic_test
 
