@@ -13,6 +13,11 @@ public:
   typedef Item value_type;
   // CONSTRUCTOR
   Heap();
+  Heap(Item* arr, int size);
+  // BIG 3
+  Heap(const Heap& x);                //Constructs a container with a copy of each of the elements in x, in the same order.
+  ~Heap();                            //Destroys the container object.
+  Heap& operator = (const Heap& x);   //Assigns new contents to the container, replacing its current contents, and modifying its size accordingly.
   // MODIFICATION MEMBER FUNCTIONS
   void insert(const Item& insert_me); //insert into the heap
   Item remove();                      //remove and return top value 
@@ -31,8 +36,8 @@ public:
   }
 private:
   static const int CAPACITY = 1000;
-  Item _heap[CAPACITY]; //static array
-  int _size;            //num used
+  int _size;   // the space used
+  Item* _heap; // dynamic array
 
   void print_tree(std::ostream& outs = std::cout) const;
   void print_tree(int root, int level = 0, std::ostream& outs = std::cout) const;

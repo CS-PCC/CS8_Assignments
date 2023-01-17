@@ -34,4 +34,4 @@
 
 ## Chapter 11: Heaps
 
-- [`11_01_heap`](assignments/11_01_heap/)
+- [`11_02_heap`](assignments/11_02_heap/)
