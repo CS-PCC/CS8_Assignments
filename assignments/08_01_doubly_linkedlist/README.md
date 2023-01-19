@@ -100,7 +100,7 @@ T _delete_node(node<T>* &head, node<T>* delete_this);
 template <typename T>
 node<T>* _copy_list(node<T>* head);
 
-//duplicate list and return the last node of the copy
+//duplicate list and return dest
 template <typename T>
 node<T>* _copy_list(node<T>* &dest, node<T>* src);
 
