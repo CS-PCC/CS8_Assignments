@@ -204,6 +204,19 @@ std::size_t tree_size(const binary_tree_node<Item>* node_ptr);
 
 // Implementation NON-MEMBER FUNCTIONS
 
-// TODO 
+// TODO
+
+template <class Item>
+void print(binary_tree_node<Item>* node_ptr, int depth)
+// Library facilities used: iomanip, iostream, stdlib
+{
+  if (node_ptr != nullptr)
+  {
+    print(node_ptr->right(), depth+1);
+    std::cout << std::setw(4*depth) << ""; // Indent 4*depth spaces.
+    std::cout << *node_ptr << std::endl;
+    print(node_ptr->left(),  depth+1);
+  }
+}
 
 #endif // BINARY_TREE_H
