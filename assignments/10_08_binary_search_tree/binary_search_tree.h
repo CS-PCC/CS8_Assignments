@@ -38,7 +38,7 @@ public:
   void erase(const Item &val);
   void clear_all();
   // CONST FUNCTIONS
-  const binary_tree_node<Item>* root();
+  const binary_tree_node<Item>* root() const;
   bool empty() const;
   // OVERLOAD OPERATOR FUNCTIONS
   template <class U>
