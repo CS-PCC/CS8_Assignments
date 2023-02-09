@@ -10,6 +10,8 @@
 1. Implement three **rotation** non-member functions.
 2. Test implementations by creating more complicated trees in `testB.cpp` file.
 
+Note: The value in AVL should be unique!
+
 
 ## Rotation Functions
 

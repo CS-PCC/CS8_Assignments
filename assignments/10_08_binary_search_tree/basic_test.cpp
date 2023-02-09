@@ -64,6 +64,16 @@ bool basic_test_tree_node(bool debug=false)
   bst.insert(11);
   cout << "Insert node 11 is:" << endl << bst << endl;
   cout << "----------------------------" << endl << endl;
+
+  int size_old = tree_size(bst.root());
+  bst.insert(11);
+  if (size_old == tree_size(bst.root())) {
+    cout << "Will not insert same value to BST" << endl;
+  } else {
+    cout << "Tree value should be unique" << endl;
+  }
+  cout << "Insert node 11 is:" << endl << bst << endl;
+  cout << "----------------------------" << endl << endl;
   
   cout << "Delete BST" << endl << endl;
 
@@ -148,6 +158,7 @@ includes
     └── binary_search_tree.h
 
 2 directories, 2 files
+
 
 ----------running basic_test.cpp---------
 

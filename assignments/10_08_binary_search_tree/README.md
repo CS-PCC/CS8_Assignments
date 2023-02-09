@@ -8,3 +8,5 @@
 1. Implement `BST` class in [binary_search_tree.h](binary_search_tree.h)
 2. Implement non-member functions for the `BST` class.
 3. Test implementations by creating more complicated trees in `testB.cpp` file.
+
+Note: The value in BST should be unique!
