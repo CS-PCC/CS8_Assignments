@@ -30,7 +30,8 @@ public:
   Item *heap_array();                 //returns a copy of underlying array:
                                       //  don't forget to delete when done
   // OVERLOAD OPERATOR FUNCTIONS
-  friend std::ostream& operator << (std::ostream& outs, const Heap<Item>& print_me) {
+  template <class U>
+  friend std::ostream& operator << (std::ostream& outs, const Heap<U>& print_me) {
     print_me.print_tree();
     return outs;
   }
