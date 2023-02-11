@@ -6,15 +6,15 @@
 
 #include "../binary_tree/binary_tree.h"
 
-// NON-MEMBER FUNCTIONS for the BST<Item>:
+// NON-MEMBER FUNCTIONS for the BST<Item>
 template <class Item>
 binary_tree_node<Item>* sortedArrayToBST(const Item* nums, int left, int right);
 template <class Item>
-binary_tree_node<Item>* searchBST(binary_tree_node<Item>* root, int val);
+binary_tree_node<Item>* searchBST(binary_tree_node<Item>* root, Item val);
 template <class Item>
-binary_tree_node<Item>* insertIntoBST(binary_tree_node<Item>* root, int val);
+binary_tree_node<Item>* insertIntoBST(binary_tree_node<Item>* root, Item val);
 template <class Item>
-binary_tree_node<Item>* deleteNode(binary_tree_node<Item>* root, int key);
+binary_tree_node<Item>* deleteNode(binary_tree_node<Item>* root, Item key);
 template <class Item>
 binary_tree_node<Item>* mergeTrees(binary_tree_node<Item>* t1, binary_tree_node<Item>* t2);
 
@@ -33,13 +33,13 @@ public:
   BST<Item>& operator = (const BST<Item> &rhs);
   // MODIFICATION FUNCTIONS
   binary_tree_node<Item>* root();
-  binary_tree_node<Item>* search(const Item& target);
   void insert(const Item &val);
   void erase(const Item &val);
   void clear_all();
   // CONST FUNCTIONS
   const binary_tree_node<Item>* root() const;
   bool empty() const;
+  binary_tree_node<Item>* search(const Item& target) const;
   // OVERLOAD OPERATOR FUNCTIONS
   template <class U>
   friend std::ostream& operator << (std::ostream &outs, const BST<U>& tree);
