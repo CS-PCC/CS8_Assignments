@@ -13,8 +13,8 @@
 // CONSTRUCTOR for the binary_tree_node<Item> class:
 //   binary_tree_node(
 //       const item& init_data = Item( ),
-//       binary_tree_node<Item>* init_left = NULL,
-//       binary_tree_node<Item>* init_right = NULL
+//       binary_tree_node<Item>* init_left = nullptr,
+//       binary_tree_node<Item>* init_right = nullptr
 //   )
 //     Postcondition: The new node has its data equal to init_data,
 //     and it's child pointers equal to init_left and init_right.
@@ -40,14 +40,14 @@
 //   void set_data(const Item& new_data)
 //     Postcondition: The binary_tree_node now contains the specified new data.
 //
-//   void set_left(binary_tree_node* new_link)
+//   void set_left(binary_tree_node* new_left)
 //   and
-//   void set_right(binary_tree_node* new_link)
+//   void set_right(binary_tree_node* new_right)
 //     Postcondition: The binary_tree_node now contains the specified new link
 //     to a child.
 //     Don't forget to update the tree_height
 //
-//   bool is_leaf( )
+//   bool is_leaf( ) const
 //     Postcondition: The return value is true if the node is a leaf;
 //     otherwise the return value is false.
 //
