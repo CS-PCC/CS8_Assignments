@@ -37,6 +37,12 @@ bool isAVL(binary_tree_node<Item>* root)
 
 bool basic_test_avl_tree(bool debug=false)
 {
+  AVL<int> simple;
+  simple.insert(15);
+  simple.insert(80);
+  simple.insert(64);
+  cout << "AVL is:" << endl << simple << endl;
+
   int sorted_list[50], size = 0;
   for (int i = 0; i < 30; i++)
   {
@@ -106,6 +112,11 @@ includes
 [----------] Global test environment set-up.
 [----------] 1 test from BASIC_TEST
 [ RUN      ] BASIC_TEST.TestTreeNode
+AVL is:
+    [80]
+[64]
+    [15]
+
 AVL is:
                 [58]
             [56]
