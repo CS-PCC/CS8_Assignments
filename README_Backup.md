@@ -26,3 +26,9 @@
 
 - [`10_02_binary_tree`](assignments/10_02_binary_tree/)
 - [`10_08_binary_search_tree`](assignments/10_08_binary_search_tree/)
+
+## Chapter 12: Hash Table
+
+- [`12_03_double_hash`](assignments/12_03_double_hash/)
+- [`12_05_chained_hash`](assignments/12_05_chained_hash/)
+
