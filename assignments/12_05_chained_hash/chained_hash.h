@@ -41,7 +41,6 @@
 //   size_t capacity() const
 //     Postcondition: Return value is the capacity of records in the ChainedHash.
 
-
 #ifndef CHAINED_HASH_H
 #define CHAINED_HASH_H
 
@@ -59,7 +58,8 @@ public:
   // TYPEDEF
   typedef RecordType record_type;
   // MEMBER CONSTANT
-  static const std::size_t TABLE_SIZE = 19; // 811;
+  static const std::size_t TABLE_SIZE = 19;  // basic_test
+  // static const std::size_t TABLE_SIZE = 811; // for submission
   // CONSTRUCTORS AND DESTRUCTOR
   ChainedHash();
   ChainedHash(const ChainedHash& source);
@@ -89,23 +89,14 @@ private:
 // Implementation NON-MEMBER FUNCTIONS
 
 template <class Item>
-void print_item(const Item& data)
+void print_item_chained(const Item& data)
 {
   std::cout << data;
 }
 
 // Implementation MEMBER FUNCTIONS
 
-template <class RecordType>
-void ChainedHash<RecordType>::print_hash(std::ostream& outs) const
-{
-  for (int i=0; i<TABLE_SIZE; i++) {
-    outs << "[" << std::setw(3) << std::setfill('0') << i << std::setfill(' ') << "] ";
-    inorder(print_item<RecordType>, data[i].root());
-    outs << std::endl;
-  }
-}
-
 // TODO
+
 
 #endif // CHAINED_HASH_H
