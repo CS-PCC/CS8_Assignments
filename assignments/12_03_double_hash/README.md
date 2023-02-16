@@ -14,7 +14,8 @@ next_hash = (index + hash2(key)) % CAPACITY;
 ```
 
 1. Implement `DoubleHash` class in [double_hash.h](double_hash.h)
-2. Toggle the following line between basic_test and submit to github
+2. Do NOT modify [hash_record.h](hash_record.h) file. `HashRecord` is a type of object is going to store into hash table. The `ChainedHash` object will never make reference to the `item` field of the `HashRecord` structure. You may only assume the `HashRecord` used will have a `key` field.
+3. Toggle the following line between basic_test and submit to github
 
 ```cpp
 static const std::size_t CAPACITY = 19;  // basic_test
