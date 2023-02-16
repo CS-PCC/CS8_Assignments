@@ -44,7 +44,7 @@ Then, generate the same number of keys making sure they are not in the array and
 
 Report the result of your test
 
-Sample Run:
+#### Sample Run:
 
 Here I am running both chained_hash and open_hash random tests:
 
