@@ -29,12 +29,15 @@ const string DASH = "\n"+string(50,'.')+"\n";
 
 bool test_heap(bool debug=false)
 {
+  // initial heap
   Heap<int> heap;
 
   cout << "Heap Test" << LINE;
   cout << "heap is not empty: " << boolalpha << heap.is_empty() << endl << endl;
 
-  for (int i = 0; i < 21; i++)
+  // insert to heap
+  int size = 21;
+  for (int i = 0; i < size; i++)
   {
     heap.insert(random(10, 100));
   }
@@ -49,12 +52,21 @@ bool test_heap(bool debug=false)
 
   cout << "heap array: " << endl;
   for (int i = 0; i < heap.size(); i++)
-  {
     cout << "|" << *walker++;
-  }
-  cout << "|";
+  cout << "|" << endl;
+  cout << endl;
 
-  cout << endl << LINE << endl << "Test pop()" << endl << LINE << endl;
+  // remove one node from heap
+  for (int i=0; i<size*2; i++)
+  {
+    heap.remove_node(random(10, 100));
+  }
+  cout << "number of elements on the tree: " << heap.size() << endl;
+  cout << "the tree is " << (heap.verify() ? "" : "in") << "valid" << endl;
+  cout << "the tree: " << endl << endl << heap << DASH << endl;
+
+  // remove top from heap
+  cout << LINE << endl << "Test pop()" << endl << LINE << endl;
   while (!heap.is_empty())
   {
     cout << "removed: " << heap.top() << endl;
@@ -68,7 +80,48 @@ bool test_heap(bool debug=false)
     cout << "the new tree: " << endl << endl << heap << DASH << endl;
   }
 
+  // initial array
+  int arr[50];
+  for (int i = 0; i < size; i++)
+    arr[i] = random(10, 100);
+
+  // initial heap by array
+  Heap<int> heap2(arr, size);
+  cout << "number of elements on the tree 2: " << heap2.size() << endl;
+  cout << "the tree 2 is " << (heap2.verify() ? "" : "in") << "valid" << endl;
+  cout << "the tree 2: " << endl << endl << heap2 << DASH << endl;
+
+  // initial heap by another heap
+  Heap<int> heap3(heap2);
+  cout << "number of elements on the tree 3: " << heap3.size() << endl;
+  cout << "the tree 3 is " << (heap3.verify() ? "" : "in") << "valid" << endl;
+  cout << "the tree 3: " << endl << endl << heap3 << DASH << endl;
+
+  // create heap by another heap
+  Heap<int> heap4;
+  heap4 = heap3;
+  cout << "number of elements on the tree 4: " << heap4.size() << endl;
+  cout << "the tree 4 is " << (heap4.verify() ? "" : "in") << "valid" << endl;
+  cout << "the tree 4: " << endl << endl << heap4 << DASH << endl;
+
+  // heap sort
+  heap_array = heap4.heap_array();
+  walker = heap_array;
+  cout << "heap 4 array: " << endl;
+  for (int i = 0; i < heap4.size(); i++)
+    cout << "|" << *walker++;
+  cout << "|" << endl;
+
+  int* sorted_array = heap4.heap_sort();
+  walker = sorted_array;
+  cout << "heap 4 sorted array: " << endl;
+  for (int i = 0; i < heap4.size(); i++)
+    cout << "|" << *walker++;
+  cout << "|" << endl;
+  cout << endl;
+
   delete [] heap_array;
+  delete [] sorted_array;
 
   return true;
 }
@@ -100,11 +153,6 @@ includes
 
 ----------running basic_test.cpp---------
 
-
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from BASIC_TES
-[ RUN      ] BASIC_TES.TestHeap
 Heap Test
 --------------------------------------------------
 heap is not empty: true
@@ -139,382 +187,177 @@ the tree is valid
 heap array: 
 |86|72|82|67|72|73|73|40|66|41|65|33|54|65|31|36|39|42|21|32|28|
 
+number of elements on the tree: 12
+the tree is valid
+the tree: 
+
+        65
+    73
+        33
+            21
+82
+            28
+        65
+            41
+    72
+            42
+        67
+            32
+
+..................................................
+
+
 --------------------------------------------------
 
 Test pop()
 
 --------------------------------------------------
 
-removed: 86
-top of the heap: 82
-number of elements on the heap: 20
-the tree is valid
-the new tree: 
-
-            31
-        73
-            65
-    73
-            28
-        54
-            33
-82
-            65
-        72
-            41
-                32
-    72
-                21
-            66
-                42
-        67
-                39
-            40
-                36
-
-..................................................
-
 removed: 82
 top of the heap: 73
-number of elements on the heap: 19
+number of elements on the heap: 11
 the tree is valid
 the new tree: 
 
-            31
+        21
+    65
+        33
+73
+            28
         65
+            41
+    72
+            42
+        67
             32
-    73
-            28
-        54
-            33
-73
-            65
-        72
-            41
-    72
-                21
-            66
-                42
-        67
-                39
-            40
-                36
-
-..................................................
-
-removed: 73
-top of the heap: 73
-number of elements on the heap: 18
-the tree is valid
-the new tree: 
-
-            31
-        32
-            21
-    65
-            28
-        54
-            33
-73
-            65
-        72
-            41
-    72
-            66
-                42
-        67
-                39
-            40
-                36
 
 ..................................................
 
 removed: 73
 top of the heap: 72
-number of elements on the heap: 17
+number of elements on the heap: 10
 the tree is valid
 the new tree: 
 
-            31
-        32
-            21
+        21
     65
-            28
-        54
-            33
+        33
 72
-            42
-        65
-            41
-    72
-            66
-        67
-                39
-            40
-                36
-
-..................................................
-
-removed: 72
-top of the heap: 72
-number of elements on the heap: 16
-the tree is valid
-the new tree: 
-
-            31
-        32
-            21
-    65
-            28
-        54
-            33
-72
-            42
         65
             41
     67
-            39
-        66
-            40
-                36
+            28
+        42
+            32
 
 ..................................................
 
 removed: 72
 top of the heap: 67
-number of elements on the heap: 15
-the tree is valid
-the new tree: 
-
-            31
-        32
-            21
-    65
-            28
-        54
-            33
-67
-            42
-        65
-            41
-    66
-            39
-        40
-            36
-
-..................................................
-
-removed: 67
-top of the heap: 66
-number of elements on the heap: 14
-the tree is valid
-the new tree: 
-
-        32
-            21
-    65
-            28
-        54
-            33
-66
-            31
-        42
-            41
-    65
-            39
-        40
-            36
-
-..................................................
-
-removed: 66
-top of the heap: 65
-number of elements on the heap: 13
-the tree is valid
-the new tree: 
-
-        32
-    65
-            28
-        54
-            33
-65
-            31
-        41
-            21
-    42
-            39
-        40
-            36
-
-..................................................
-
-removed: 65
-top of the heap: 65
-number of elements on the heap: 12
-the tree is valid
-the new tree: 
-
-        32
-    54
-        33
-            28
-65
-            31
-        41
-            21
-    42
-            39
-        40
-            36
-
-..................................................
-
-removed: 65
-top of the heap: 54
-number of elements on the heap: 11
-the tree is valid
-the new tree: 
-
-        32
-    33
-        28
-54
-            31
-        41
-            21
-    42
-            39
-        40
-            36
-
-..................................................
-
-removed: 54
-top of the heap: 42
-number of elements on the heap: 10
-the tree is valid
-the new tree: 
-
-        32
-    33
-        28
-42
-        31
-            21
-    41
-            39
-        40
-            36
-
-..................................................
-
-removed: 42
-top of the heap: 41
 number of elements on the heap: 9
 the tree is valid
 the new tree: 
 
-        32
-    33
-        28
-41
-        31
-    40
-            21
-        39
-            36
+        21
+    65
+        33
+67
+        41
+    65
+            28
+        42
+            32
 
 ..................................................
 
-removed: 41
-top of the heap: 40
+removed: 67
+top of the heap: 65
 number of elements on the heap: 8
 the tree is valid
 the new tree: 
 
+        21
+    65
+        33
+65
+        41
+    42
         32
-    33
-        28
-40
-        31
-    39
-        36
-            21
+            28
 
 ..................................................
 
-removed: 40
-top of the heap: 39
+removed: 65
+top of the heap: 65
 number of elements on the heap: 7
 the tree is valid
 the new tree: 
 
-        32
+        21
     33
         28
-39
-        31
-    36
-        21
+65
+        41
+    42
+        32
 
 ..................................................
 
-removed: 39
-top of the heap: 36
+removed: 65
+top of the heap: 42
 number of elements on the heap: 6
 the tree is valid
 the new tree: 
 
     33
         28
-36
-        31
-    32
+42
         21
+    41
+        32
 
 ..................................................
 
-removed: 36
-top of the heap: 33
+removed: 42
+top of the heap: 41
 number of elements on the heap: 5
 the tree is valid
 the new tree: 
 
-    28
-33
-        31
-    32
+    33
+41
         21
+    32
+        28
+
+..................................................
+
+removed: 41
+top of the heap: 33
+number of elements on the heap: 4
+the tree is valid
+the new tree: 
+
+    21
+33
+    32
+        28
 
 ..................................................
 
 removed: 33
 top of the heap: 32
-number of elements on the heap: 4
-the tree is valid
-the new tree: 
-
-    28
-32
-    31
-        21
-
-..................................................
-
-removed: 32
-top of the heap: 31
 number of elements on the heap: 3
 the tree is valid
 the new tree: 
 
-    28
-31
     21
+32
+    28
 
 ..................................................
 
-removed: 31
+removed: 32
 top of the heap: 28
 number of elements on the heap: 2
 the tree is valid
@@ -543,6 +386,95 @@ the new tree:
 
 
 ..................................................
+
+number of elements on the tree 2: 21
+the tree 2 is valid
+the tree 2: 
+
+            25
+        80
+            55
+    90
+            54
+        67
+            24
+99
+            30
+        87
+                29
+            52
+                38
+    93
+                39
+            62
+                58
+        86
+                17
+            57
+                31
+
+..................................................
+
+number of elements on the tree 3: 21
+the tree 3 is valid
+the tree 3: 
+
+            25
+        80
+            55
+    90
+            54
+        67
+            24
+99
+            30
+        87
+                29
+            52
+                38
+    93
+                39
+            62
+                58
+        86
+                17
+            57
+                31
+
+..................................................
+
+number of elements on the tree 4: 21
+the tree 4 is valid
+the tree 4: 
+
+            25
+        80
+            55
+    90
+            54
+        67
+            24
+99
+            30
+        87
+                29
+            52
+                38
+    93
+                39
+            62
+                58
+        86
+                17
+            57
+                31
+
+..................................................
+
+heap 4 array: 
+|99|93|90|86|87|67|80|57|62|52|30|24|54|55|25|31|17|58|39|38|29|
+heap 4 sorted array: 
+|17|24|25|29|30|31|38|39|52|54|55|57|58|62|67|80|86|87|90|93|99|
 
 [       OK ] BASIC_TES.TestHeap (7 ms)
 [----------] 1 test from BASIC_TES (7 ms total)
