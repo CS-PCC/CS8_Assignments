@@ -19,8 +19,11 @@ public:
   ~Heap();                            //Destroys the container object.
   Heap& operator = (const Heap& x);   //Assigns new contents to the container, replacing its current contents, and modifying its size accordingly.
   // MODIFICATION MEMBER FUNCTIONS
+  void heapify(int i);                //heapify the new node following a Bottom-up approach
+  void heapify(Item*& arr, int n, int i);//heapify the new node following a Bottom-up approach
   void insert(const Item& insert_me); //insert into the heap
-  void remove();                      //remove top value 
+  void remove();                      //remove top value
+  void remove_node(const Item& delete_me); //remove a node from the heap
   Item top()                          //return the value at the top of heap
   // CONST MEMBER FUNCTIONS
   bool is_empty() const;
@@ -29,9 +32,9 @@ public:
   bool verify() const;                //true if tree is verified to be a heap
   Item *heap_array();                 //returns a copy of underlying array:
                                       //  don't forget to delete when done
+  Item *heap_sort();                  //returns a copy of sorted array
   // OVERLOAD OPERATOR FUNCTIONS
-  template <class U>
-  friend std::ostream& operator << (std::ostream& outs, const Heap<U>& print_me) {
+  friend std::ostream& operator << (std::ostream& outs, const Heap<Item>& print_me) {
     print_me.print_tree();
     return outs;
   }
@@ -50,6 +53,7 @@ private:
   int parent_index(int i) const;
   int left_child_index(int i) const;
   int right_child_index(int i) const;
+  int first_nonleaf() const;
   int big_child_index(int i) const;
   void swap_with_parent(int i);
 };
