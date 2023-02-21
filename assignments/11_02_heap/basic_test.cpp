@@ -33,7 +33,7 @@ bool test_heap(bool debug=false)
   Heap<int> heap;
 
   cout << "Heap Test" << LINE;
-  cout << "heap is not empty: " << boolalpha << heap.is_empty() << endl << endl;
+  cout << "heap is empty: " << boolalpha << heap.is_empty() << endl << endl;
 
   // insert to heap
   int size = 21;
@@ -43,7 +43,7 @@ bool test_heap(bool debug=false)
   }
 
   cout << heap << LINE << endl;
-  cout << "heap is not empty: " << boolalpha << heap.is_empty() << endl;
+  cout << "heap is empty: " << boolalpha << heap.is_empty() << endl;
   cout << "number of elements on the heap: " << heap.size() << endl;
   cout << "the tree is " << (heap.verify() ? "" : "in") << "valid" << endl;
 
@@ -56,7 +56,7 @@ bool test_heap(bool debug=false)
   cout << "|" << endl;
   cout << endl;
 
-  // remove one node from heap
+  // remove one random node from heap if node is in the heap, otherwise do nothing
   for (int i=0; i<size*2; i++)
   {
     heap.remove_node(random(10, 100));
@@ -155,7 +155,7 @@ includes
 
 Heap Test
 --------------------------------------------------
-heap is not empty: true
+heap is empty: true
 
             31
         73
@@ -181,7 +181,7 @@ heap is not empty: true
 
 --------------------------------------------------
 
-heap is not empty: false
+heap is empty: false
 number of elements on the heap: 21
 the tree is valid
 heap array: 
