@@ -54,7 +54,6 @@ private:
   int left_child_index(int i) const;
   int right_child_index(int i) const;
   int first_nonleaf() const;
-  int big_child_index(int i) const;
   void swap_with_parent(int i);
 };
 
