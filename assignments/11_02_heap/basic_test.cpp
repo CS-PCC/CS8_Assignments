@@ -118,6 +118,14 @@ bool test_heap(bool debug=false)
   for (int i = 0; i < heap4.size(); i++)
     cout << "|" << *walker++;
   cout << "|" << endl;
+
+  // after heap_sort() called, heap array is same
+  heap_array = heap4.heap_array();
+  walker = heap_array;
+  cout << "heap 4 array: " << endl;
+  for (int i = 0; i < heap4.size(); i++)
+    cout << "|" << *walker++;
+  cout << "|" << endl;
   cout << endl;
 
   delete [] heap_array;
@@ -475,6 +483,8 @@ heap 4 array:
 |99|93|90|86|87|67|80|57|62|52|30|24|54|55|25|31|17|58|39|38|29|
 heap 4 sorted array: 
 |17|24|25|29|30|31|38|39|52|54|55|57|58|62|67|80|86|87|90|93|99|
+heap 4 array: 
+|99|93|90|86|87|67|80|57|62|52|30|24|54|55|25|31|17|58|39|38|29|
 
 [       OK ] BASIC_TES.TestHeap (7 ms)
 [----------] 1 test from BASIC_TES (7 ms total)

@@ -5,7 +5,7 @@
 
 ---
 
-A priority queue is a structure that keeps the largest element handy so that when it is popped, it will remove and return the largest item. Comparisons between items is usually done on a structure with a member variable representing the priority of the item. A heap is the traditional data structure used to implement a priority queue.
+A priority queue is a structure that keeps the largest element handy so that when it is popped, it will remove the largest item. Comparisons between items is usually done on a structure with a member variable representing the priority of the item. A heap is the traditional data structure used to implement a priority queue.
 
 1. Implement `Heap` class in `heap.h`
 2. Implement `info` structure in `info.h`
