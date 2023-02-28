@@ -30,7 +30,7 @@ public:
   int size() const;
   int capacity() const;
   bool verify() const;                //true if tree is verified to be a heap
-  Item *heap_array();                 //returns a copy of underlying array:
+  Item *heap_array() const;           //returns a copy of underlying array:
                                       //  don't forget to delete when done
   Item *heap_sort();                  //returns a copy of sorted array
   // OVERLOAD OPERATOR FUNCTIONS
