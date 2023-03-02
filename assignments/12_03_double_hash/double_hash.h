@@ -98,13 +98,6 @@ private:
   void print_hash(std::ostream& outs = std::cout) const;
 };  
 
-// Implementation NON-MEMBER FUNCTIONS
-
-template <class Item>
-void print_item(const Item& data)
-{
-  std::cout << data;
-}
 
 // Implementation MEMBER FUNCTIONS
 

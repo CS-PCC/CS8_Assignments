@@ -89,7 +89,7 @@ private:
 // Implementation NON-MEMBER FUNCTIONS
 
 template <class Item>
-void print_item_chained(const Item& data)
+void print_item(const Item& data)
 {
   std::cout << data;
 }
