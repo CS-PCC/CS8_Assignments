@@ -11,7 +11,7 @@ struct HashRecord
   HashRecord(int key=-1, std::string item="") : key(key), item(item) {}
 
   friend std::ostream& operator <<(std::ostream& outs, const HashRecord& h) {
-    std::cout << "[" << h.key << ":" << h.item << "]";
+    outs << "[" << h.key << ":" << h.item << "]";
     return outs;
   }
 
