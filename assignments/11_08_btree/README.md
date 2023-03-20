@@ -29,17 +29,6 @@ a. Search
 b. Insert
 c. Delete
 
-### Implement print function as soon as possible
-
-```cpp
-// Print the Bree in readable version
-void print(int indent=0, std::ostream& outs = std::cout) const
-{
-  //1. print the last child (if any)
-  //2. print all the rest of the data and children
-}
-```
-
 ### Implement Search
 
 ```cpp
@@ -52,6 +41,17 @@ Item* find(const Item& entry);
 bool insert(const Item& entry);
 bool loose_insert(const Item& entry);
 void fix_excess(std::size_t i);
+```
+
+### Implement Print
+
+```cpp
+// Print the Bree in readable version
+void print(int indent=0, std::ostream& outs = std::cout) const
+{
+  //1. print the last child (if any)
+  //2. print all the rest of the data and children
+}
 ```
 
 ### Implement Delete
