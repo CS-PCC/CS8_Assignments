@@ -193,7 +193,7 @@ bool BTree<Item>::is_valid() const
   // check if the node is empty
   if (empty()) return true;
   // check if the node has too many entries
-  if (data_count > MAXIMUM || data_count < 0) {
+  if (data_count > MAXIMUM || data_count < MINIMUM) {
     return false;
   }
   // check if the node has too many children
