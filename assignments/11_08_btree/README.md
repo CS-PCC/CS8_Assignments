@@ -23,11 +23,11 @@ BTree class functions are heavily dependant on the utility [array functions](btr
 
 ## 2. Implement BTree class
 
-[BTree class](btree.h) has tree operations
+[BTree class](btree.h) has tree operations:
 
-a. Search
-b. Insert
-c. Delete
+- Search
+- Insert
+- Delete
 
 ### Implement Search
 
