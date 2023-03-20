@@ -49,6 +49,8 @@ void fix_excess(std::size_t i);
 // Print the Bree in readable version
 void print(int indent=0, std::ostream& outs = std::cout) const
 {
+  std::string down_bracket = "\357\271\207"; // ﹇
+  std::string up_bracket   = "\357\271\210"; // ﹈
   //1. print the last child (if any)
   //2. print all the rest of the data and children
 }
