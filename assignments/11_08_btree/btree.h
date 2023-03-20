@@ -56,6 +56,9 @@
 //   void print(int indent=0, std::ostream& outs = std::cout) const
 //     Postcondition: Print the Bree in readable version
 //
+//   bool is_valid() const
+//     Postcondition: Returns true if the BTree is valid, otherwise return false.
+//
 // SUGGESTED FUNCTION FOR DEBUGGING
 //   std::string in_order()
 //     Postcondition: traverse the tree in_order, return a string of all the 
@@ -152,6 +155,7 @@ public:
   std::size_t size() const;
   bool empty() const { return (data_count == 0); }
   void print(int indent=0, std::ostream& outs = std::cout) const;
+  bool is_valid() const;
   // OVERLOAD OPERATOR FUNCTIONS
   template<class U>
   friend std::ostream& operator << (std::ostream& outs, const BTree<U>& btree);
@@ -181,6 +185,48 @@ private:
 };
 
 // Implementation MEMBER FUNCTIONS
+
+template <class Item>
+bool BTree<Item>::is_valid() const
+{
+  bool valid = true;
+  // check if the node is empty
+  if (empty()) return true;
+  // check if the node has too many entries
+  if (data_count > MAXIMUM || data_count < 0) {
+    return false;
+  }
+  // check if the node has too many children
+  if (child_count > MAXIMUM+1 || child_count < 0) {
+    return false;
+  }
+  // check if the data is sorted
+  for (size_t i=0; i<data_count-1; i++) {
+    if (data[i] > data[i+1]) return false;
+  }
+  if (!is_leaf()) {
+    // check if the child_count is not equal to data_count+1
+    if (child_count != data_count+1) {
+      return false;
+    }
+    // check if data is in range of children
+    for (size_t i=0; i<data_count; i++) {
+      // check if data[i] is greater than subset[i]
+      valid = is_gt(subset[i]->data, subset[i]->data_count, data[i]);
+      if (!valid) return false;
+      // check if data[i] is less than subset[i+1]
+      valid = is_le(subset[i+1]->data, subset[i+1]->data_count, data[i]);
+      if (!valid) return false;
+      // check if subset[i] is valid
+      valid = subset[i]->is_valid();
+      if (!valid) return false;
+    }
+    // check if the last child is valid
+    valid = subset[data_count]->is_valid();
+    if (!valid) return false;
+  }
+  return true;
+}
 
 // TODO
 
