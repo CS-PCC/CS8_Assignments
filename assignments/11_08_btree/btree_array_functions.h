@@ -57,6 +57,23 @@ void print_array(const T data[], std::size_t n, std::size_t pos = 0);//print arr
 
 // Definition
 
+template <class T>
+bool is_le(const T data[], std::size_t n, const T& item) {
+  for(std::size_t i = 0; i < n; i++) {
+    if (item > data[i]) return false;
+  }
+  return true;
+}
+
+template <class T>
+bool is_gt(const T data[], std::size_t n, const T& item)
+{
+  for(std::size_t i = 0; i < n; i++) {
+    if (item <= data[i]) return false;
+  }
+  return true;
+}
+
 // TODO
 
 
