@@ -109,17 +109,21 @@ bool basic_test_btree(bool debug=false)
   size_t n = 5;
   BTree<int> bt(a, n);
   cout << "Here is the tree: " << endl << bt << endl;
-  cout << "in order: |" << bt.in_order() << endl;
-  cout << "tree size: " << bt.size() << endl;
-
+  cout << "tree in order: |" << bt.in_order() << endl;
+  cout << "tree size is : " << bt.size() << endl;
+  cout << "tree is empty: " << boolalpha << bt.empty() << endl;
+  cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
+
   cout << "adding 10, 50, 200: " << endl;
   bt.insert(10);
   bt.insert(50);
   bt.insert(200);
-  cout << "in order: |" << bt.in_order() << endl;
-  cout << "tree size: " << bt.size() << endl;
-  cout << "Here is the tree: " << endl << bt << endl;
+  cout << "tree in order: |" << bt.in_order() << endl;
+  cout << "tree size is : " << bt.size() << endl;
+  cout << "tree is empty: " << boolalpha << bt.empty() << endl;
+  cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
+  cout << endl;
 
   cout << "bt.contains(20): " << boolalpha << bt.contains(20) << endl;
   cout << "bt.contains(0): " << boolalpha << bt.contains(0) << endl;
@@ -132,30 +136,38 @@ bool basic_test_btree(bool debug=false)
   bt.insert(12);
   cout << "adding 12: " << endl;
   cout << "Here is the tree: " << endl << bt << endl;
-  cout << "in order: |" << bt.in_order() << endl;
-  cout << "tree size: " << bt.size() << endl;
+  cout << "tree in order: |" << bt.in_order() << endl;
+  cout << "tree size is : " << bt.size() << endl;
+  cout << "tree is empty: " << boolalpha << bt.empty() << endl;
+  cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
 
   bt.insert(300);
   cout << "added 300: " << endl;
   cout << "Here is the tree: " << endl << bt << endl;
-  cout << "in order: |" << bt.in_order() << endl;
-  cout << "tree size: " << bt.size() << endl;
+  cout << "tree in order: |" << bt.in_order() << endl;
+  cout << "tree size is : " << bt.size() << endl;
+  cout << "tree is empty: " << boolalpha << bt.empty() << endl;
+  cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
 
   bt.insert(55);
   cout << "added 55: " << endl;
   cout << "Here is the tree: " << endl << bt << endl;
-  cout << "in order: |" << bt.in_order() << endl;
-  cout << "tree size: " << bt.size() << endl;
+  cout << "tree in order: |" << bt.in_order() << endl;
+  cout << "tree size is : " << bt.size() << endl;
+  cout << "tree is empty: " << boolalpha << bt.empty() << endl;
+  cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
 
   cout << "copying tree " << endl;
   BTree<int> bt2(bt);
   cout << "copy of bt :" << endl;
   cout << bt2;
-  cout << "in order: |" << bt.in_order() << endl;
-  cout << "tree size: " << bt.size() << endl;
+  cout << "tree in order: |" << bt.in_order() << endl;
+  cout << "tree size is : " << bt.size() << endl;
+  cout << "tree is empty: " << boolalpha << bt.empty() << endl;
+  cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
 
   cout << LINE << endl;
@@ -168,9 +180,10 @@ bool basic_test_btree(bool debug=false)
     cout << "removing: [" << b[i] << "]" << endl;
     bt.erase(b[i]);
     cout << bt << endl;
-    cout << "in order: |" << bt.in_order() << endl;
-    cout << "tree size: " << bt.size() << endl;
+    cout << "tree in order: |" << bt.in_order() << endl;
+    cout << "tree size is : " << bt.size() << endl;
     cout << "tree is empty: " << boolalpha << bt.empty() << endl;
+    cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
     cout << DASH << endl;
   }
 
@@ -235,29 +248,16 @@ Here is the tree:
     20
     ﹈
 
-in order: |20|43|69|96|100|
-tree size: 5
+tree in order: |20|43|69|96|100|
+tree size is : 5
+tree is empty: false
+tree is valid: true
 
 adding 10, 50, 200: 
-in order: |10|20|43|50|69|96|100|200|
-tree size: 8
-Here is the tree: 
-    ﹇
-    200
-    100
-    ﹈
-﹇
-96
-    ﹇
-    69
-    50
-    ﹈
-43
-﹈
-    ﹇
-    20
-    10
-    ﹈
+tree in order: |10|20|43|50|69|96|100|200|
+tree size is : 8
+tree is empty: false
+tree is valid: true
 
 bt.contains(20): true
 bt.contains(0): false
@@ -293,8 +293,10 @@ Here is the tree:
         10
         ﹈
 
-in order: |10|12|20|43|50|69|96|100|200|
-tree size: 9
+tree in order: |10|12|20|43|50|69|96|100|200|
+tree size is : 9
+tree is empty: false
+tree is valid: true
 
 added 300: 
 Here is the tree: 
@@ -325,8 +327,10 @@ Here is the tree:
         10
         ﹈
 
-in order: |10|12|20|43|50|69|96|100|200|300|
-tree size: 10
+tree in order: |10|12|20|43|50|69|96|100|200|300|
+tree size is : 10
+tree is empty: false
+tree is valid: true
 
 added 55: 
 Here is the tree: 
@@ -362,8 +366,10 @@ Here is the tree:
         10
         ﹈
 
-in order: |10|12|20|43|50|55|69|96|100|200|300|
-tree size: 11
+tree in order: |10|12|20|43|50|55|69|96|100|200|300|
+tree size is : 11
+tree is empty: false
+tree is valid: true
 
 copying tree 
 copy of bt :
@@ -398,8 +404,10 @@ copy of bt :
         ﹇
         10
         ﹈
-in order: |10|12|20|43|50|55|69|96|100|200|300|
-tree size: 11
+tree in order: |10|12|20|43|50|55|69|96|100|200|300|
+tree size is : 11
+tree is empty: false
+tree is valid: true
 
 
 --------------------------------------------------
@@ -436,9 +444,10 @@ removing: [43]
         10
         ﹈
 
-in order: |10|12|20|50|55|69|96|100|200|300|
-tree size: 10
+tree in order: |10|12|20|50|55|69|96|100|200|300|
+tree size is : 10
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -469,9 +478,10 @@ removing: [20]
         10
         ﹈
 
-in order: |10|12|50|55|69|96|100|200|300|
-tree size: 9
+tree in order: |10|12|50|55|69|96|100|200|300|
+tree size is : 9
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -499,9 +509,10 @@ removing: [96]
         10
         ﹈
 
-in order: |10|12|50|55|69|100|200|300|
-tree size: 8
+tree in order: |10|12|50|55|69|100|200|300|
+tree size is : 8
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -529,9 +540,10 @@ removing: [97]
         10
         ﹈
 
-in order: |10|12|50|55|69|100|200|300|
-tree size: 8
+tree in order: |10|12|50|55|69|100|200|300|
+tree size is : 8
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -558,9 +570,10 @@ removing: [10]
         12
         ﹈
 
-in order: |12|50|55|69|100|200|300|
-tree size: 7
+tree in order: |12|50|55|69|100|200|300|
+tree size is : 7
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -580,9 +593,10 @@ removing: [50]
     12
     ﹈
 
-in order: |12|55|69|100|200|300|
-tree size: 6
+tree in order: |12|55|69|100|200|300|
+tree size is : 6
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -601,9 +615,10 @@ removing: [200]
     12
     ﹈
 
-in order: |12|55|69|100|300|
-tree size: 5
+tree in order: |12|55|69|100|300|
+tree size is : 5
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -619,9 +634,10 @@ removing: [12]
     55
     ﹈
 
-in order: |55|69|100|300|
-tree size: 4
+tree in order: |55|69|100|300|
+tree size is : 4
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -637,9 +653,10 @@ removing: [1]
     55
     ﹈
 
-in order: |55|69|100|300|
-tree size: 4
+tree in order: |55|69|100|300|
+tree size is : 4
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -654,9 +671,10 @@ removing: [300]
     55
     ﹈
 
-in order: |55|69|100|
-tree size: 3
+tree in order: |55|69|100|
+tree size is : 3
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -671,9 +689,10 @@ removing: [400]
     55
     ﹈
 
-in order: |55|69|100|
-tree size: 3
+tree in order: |55|69|100|
+tree size is : 3
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -683,9 +702,10 @@ removing: [55]
 69
 ﹈
 
-in order: |69|100|
-tree size: 2
+tree in order: |69|100|
+tree size is : 2
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -694,9 +714,10 @@ removing: [100]
 69
 ﹈
 
-in order: |69|
-tree size: 1
+tree in order: |69|
+tree size is : 1
 tree is empty: false
+tree is valid: true
 
 ..................................................
 
@@ -704,9 +725,10 @@ removing: [69]
 ﹇
 ﹈
 
-in order: |
-tree size: 0
+tree in order: |
+tree size is : 0
 tree is empty: true
+tree is valid: true
 
 ..................................................
 
