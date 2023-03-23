@@ -29,12 +29,6 @@ BTree class functions are heavily dependant on the utility [array functions](btr
 - Insert
 - Delete
 
-### Implement Search
-
-```cpp
-Item* find(const Item& entry);
-```
-
 ### Implement Insert
 
 ```cpp
@@ -54,6 +48,12 @@ void print(int indent=0, std::ostream& outs = std::cout) const
   //1. print the last child (if any)
   //2. print all the rest of the data and children
 }
+```
+
+### Implement Search
+
+```cpp
+Item* find(const Item& entry);
 ```
 
 ### Implement Delete
