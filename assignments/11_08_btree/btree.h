@@ -54,7 +54,7 @@
 //     Postcondition: Returns true if the BTree is empty; otherwise returns false.
 //
 //   void print(int indent=0, std::ostream& outs = std::cout) const
-//     Postcondition: Print the Bree in readable version
+//     Postcondition: Print the BTree in readable version
 //
 //   bool is_valid() const
 //     Postcondition: Returns true if the BTree is valid, otherwise return false.
@@ -65,6 +65,9 @@
 //     data items with vertical delimiters
 //
 // HELPER MEMBER FUNCTIONS
+//   bool is_leaf() const
+//     Postcondition: Returns true if the BTree is a leaf, otherwise return false.
+//
 //   bool loose_insert(const Item& entry)
 //     Precondition: The entire B-tree is valid.
 //     Postcondition: If entry was already in the BTree, then the BTree is unchanged
