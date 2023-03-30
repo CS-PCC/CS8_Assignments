@@ -43,13 +43,10 @@
 //   Item* find(const Item& entry)
 //     Postcondition: Returns a pointer of found entry, otherwise return nullptr.
 //
-//   bool contains(const Item& entry)
-//     Postcondition: Returns true if entry can be found, otherwise return false.
-//
 //   Item& get(const Item& entry)
 //     Postcondition: Returns a reference of entry.
 //
-//   std::size_t size() const
+//   std::size_t size()
 //     Postcondition: Returns count the number of elements in the leaves of tree
 //
 //   Iterator lower_bound(const Item& key)
@@ -68,10 +65,13 @@
 //     Postcondition: Returns an empty iterator.
 //
 // CONSTANT MEMBER FUNCTIONS for the BPlusTree<Item> class:
+//   bool contains(const Item& entry) const
+//     Postcondition: Returns true if entry can be found, otherwise return false.
+//
 //   const Item& get(const Item& entry) const
 //     Postcondition: Returns a reference of entry.
 //
-//   std::size_t n_items() const
+//   std::size_t count() const
 //     Postcondition: Returns count the number of elements in the tree
 //
 //   bool empty() const
@@ -212,7 +212,6 @@ public:
   bool erase(const Item& target);
   // NON-CONSTANT MEMBER FUNCTIONS
   Iterator find(const Item& entry);
-  bool contains(const Item& entry);
   Item& get(const Item& entry);
   std::size_t size();
   Iterator lower_bound(const Item& key);
@@ -220,8 +219,9 @@ public:
   Iterator begin();
   Iterator end() { return Iterator(); }
   // CONSTANT MEMBER FUNCTIONS
+  bool contains(const Item& entry) const;
   const Item& get(const Item& entry) const;
-  std::size_t n_items() const;
+  std::size_t count() const;
   bool empty() const { return (data_count == 0 && is_leaf()); }
   void print(int indent=0, std::ostream& outs = std::cout) const;
   bool is_valid() const;
