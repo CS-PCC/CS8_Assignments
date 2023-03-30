@@ -265,6 +265,51 @@ private:
 
 // Implementation BPlusTree MEMBER FUNCTIONS
 
+template <class Item>
+bool BPlusTree<Item>::is_valid() const
+{
+  bool valid = true;
+  // check if the node is empty
+  if (empty()) return true;
+  // check if the node has too many entries
+  if (data_count > MAXIMUM || data_count < MINIMUM) {
+    return false;
+  }
+  // check if the node has too many children
+  if (child_count > MAXIMUM+1 || child_count < 0) {
+    return false;
+  }
+  // check if the data is sorted
+  for (size_t i=0; i<data_count-1; i++) {
+    if (data[i] > data[i+1]) return false;
+  }
+  if (!is_leaf()) {
+    // check if the child_count is not equal to data_count+1
+    if (child_count != data_count+1) {
+      return false;
+    }
+    // check if data is in range of children
+    for (size_t i=0; i<data_count; i++) {
+      // check if data[i] is greater than subset[i]
+      valid = is_gt(subset[i]->data, subset[i]->data_count, data[i]);
+      if (!valid) return false;
+      // check if data[i] is less than subset[i+1]
+      valid = is_le(subset[i+1]->data, subset[i+1]->data_count, data[i]);
+      if (!valid) return false;
+      // check if subset[i] is valid
+      valid = subset[i]->is_valid();
+      if (!valid) return false;
+      // check if data[i] is the smallest node in subset[i+1]
+      valid = data[i] == subset[i+1]->get_smallest_node()->data[0];
+      if (!valid) return false;
+    }
+    // check if the last child is valid
+    valid = subset[data_count]->is_valid();
+    if (!valid) return false;
+  }
+  return true;
+}
+
 // TODO
 
 #endif // BPLUSTREE_H
