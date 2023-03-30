@@ -20,13 +20,13 @@
 //     Postcondition: Insert entry from array to BPlusTree.
 //
 // MODIFICATION MEMBER FUNCTIONS for the BPlusTree<Item> class:
-//   void clear()
+//   void clear_tree()
 //     Postcondition: The BPlusTree is empty, delete all nodes etc.
 //
-//   void copy(const BPlusTree& source)
+//   void copy_tree(const BPlusTree& source)
 //     Postcondition: The BPlusTree is copied.
 //
-//   void copy(const BPlusTree& source)
+//   void copy_tree(const BPlusTree& source)
 //     Postcondition: The BPlusTree is copied.
 //
 //   bool insert(const Item& entry)
@@ -202,12 +202,12 @@ public:
   BPlusTree();
   BPlusTree(const BPlusTree& source);
   BPlusTree(Item* a, std::size_t size);
-  ~BPlusTree() { clear(); }
+  ~BPlusTree() { clear_tree(); }
   // MODIFICATION MEMBER FUNCTIONS
   BPlusTree& operator = (const BPlusTree& source);
-  void clear();
-  void copy(const BPlusTree& source);
-  void copy(const BPlusTree& source, BPlusTree*& last_node);
+  void clear_tree();
+  void copy_tree(const BPlusTree& source);
+  void copy_tree(const BPlusTree& source, BPlusTree*& last_node);
   bool insert(const Item& entry);
   bool erase(const Item& target);
   // NON-CONSTANT MEMBER FUNCTIONS
