@@ -226,8 +226,7 @@ public:
   void print(int indent=0, std::ostream& outs = std::cout) const;
   bool is_valid() const;
   // OVERLOAD OPERATOR FUNCTIONS
-  template<class U>
-  friend std::ostream& operator << (std::ostream& outs, const BPlusTree<U>& btree) {
+  friend std::ostream& operator << (std::ostream& outs, const BPlusTree<Item>& btree) {
     btree.print(0, outs);
     return outs;
   }
