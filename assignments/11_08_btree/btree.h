@@ -20,10 +20,10 @@
 //     Postcondition: Insert entry from array to BTree.
 //
 // MODIFICATION MEMBER FUNCTIONS for the BTree<Item> class:
-//   void clear()
+//   void clear_tree()
 //     Postcondition: The BTree is empty, delete all nodes etc.
 //
-//   void copy(const BTree& source)
+//   void copy_tree(const BTree& source)
 //     Postcondition: The BTree is copied.
 //
 //   bool insert(const Item& entry)
@@ -143,11 +143,11 @@ public:
   BTree();
   BTree(const BTree& source);
   BTree(Item* a, std::size_t size);
-  ~BTree() { clear(); }
+  ~BTree() { clear_tree(); }
   // MODIFICATION MEMBER FUNCTIONS
   BTree& operator = (const BTree& source);
-  void clear();
-  void copy(const BTree& source);
+  void clear_tree();
+  void copy_tree(const BTree& source);
   bool insert(const Item& entry);
   bool erase(const Item& target);
   // NON-CONSTANT MEMBER FUNCTIONS
