@@ -26,7 +26,7 @@
 //   void copy_tree(const BPlusTree& source)
 //     Postcondition: The BPlusTree is copied.
 //
-//   void copy_tree(const BPlusTree& source)
+//   void copy_tree(const BPlusTree& source, BPlusTree*& last_node);
 //     Postcondition: The BPlusTree is copied.
 //
 //   bool insert(const Item& entry)
@@ -47,7 +47,10 @@
 //     Postcondition: Returns a reference of entry.
 //
 //   std::size_t size()
-//     Postcondition: Returns count the number of elements in the leaves of tree
+//     Postcondition: Returns count the number of leaves in the tree
+//
+//   std::size_t size_list()
+//     Postcondition: Returns count the total number of value in the tree
 //
 //   Iterator lower_bound(const Item& key)
 //     Postcondition: Returns an iterator pointing to the first element in the
@@ -72,7 +75,7 @@
 //     Postcondition: Returns a reference of entry.
 //
 //   std::size_t count() const
-//     Postcondition: Returns count the number of elements in the tree
+//     Postcondition: Returns count the number of nodes in the tree
 //
 //   bool empty() const
 //     Postcondition: Returns true if the BPlusTree is empty; otherwise returns false.
@@ -214,6 +217,7 @@ public:
   Iterator find(const Item& entry);
   Item& get(const Item& entry);
   std::size_t size();
+  std::size_t size_list();
   Iterator lower_bound(const Item& key);
   Iterator upper_bound(const Item& key);
   Iterator begin();
