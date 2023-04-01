@@ -41,7 +41,7 @@
 
 ## Chapter 13: Sorting
 
-- [`13_19_sort`](assignments/13_19_sort/)
+- [`13_19_sorting`](assignments/13_19_sorting/)
 
 ## Chapter 11: B-Trees
 
