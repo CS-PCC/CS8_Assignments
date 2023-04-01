@@ -136,7 +136,7 @@
 //     valid EXCEPT that the number of entries in the root of this BPlusTree might be
 //     one less than the allowed minimum.
 //
-//    void delete_inner(std::size_t i, const Item& target, const Item& next_smallest)
+//    void delete_internal_node(std::size_t i, const Item& target, const Item& next_smallest)
 //       Precondition: subset[i] is an internal node.
 //       Postcondition: find target in data[i] or subset[i] or subset[i+1], 
 //       if so, replace it with next_smallest.
@@ -257,7 +257,7 @@ private:
   // remove element functions
   bool loose_erase(const Item& target);
   void fix_shortage(std::size_t i);
-  void delete_inner(std::size_t i, const Item& target, const Item& next_smallest);
+  void delete_internal_node(std::size_t i, const Item& target, const Item& next_smallest);
   void transfer_from_left(std::size_t i);
   void transfer_from_right(std::size_t i);
   void merge_with_next_subset(std::size_t i);

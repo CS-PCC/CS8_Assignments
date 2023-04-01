@@ -49,7 +49,7 @@ Iterator find(const Item& entry);
 bool erase(const Item& target);
 bool loose_erase(const Item& target);
 void fix_shortage(std::size_t i);
-void delete_inner(std::size_t i, const Item& target, const Item& next_smallest);
+void delete_internal_node(std::size_t i, const Item& target, const Item& next_smallest);
 void transfer_from_left(std::size_t i);
 void transfer_from_right(std::size_t i);
 void merge_with_next_subset(std::size_t i);
