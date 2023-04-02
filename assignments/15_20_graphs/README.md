@@ -6,6 +6,38 @@ Graphs are a flexible data structure with many occurrences in computer science a
 
 - [797. All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)
 
+## Island Problem
+
+- [1020. Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/)
+- [1254. Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/)
+- [1905. Count Sub Islands](https://leetcode.com/problems/count-sub-islands/)
+- [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
+- [694. Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/)
+- [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
+- [463. Island Perimeter](https://leetcode.com/problems/island-perimeter/)
+- [841. Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)
+- [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
+
+## BFS
+
+### Binary Tree
+
+- [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+- [107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)
+- [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+- [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)
+- [429. N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)
+- [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
+- [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+- [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/)
+- [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+- [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+
+### Graph
+
+- [752. Open the Lock](https://leetcode.com/problems/open-the-lock/)
+- [773. Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/)
+
 ## Cycle Detection for Directed Graphs
 
 - [207. Course Schedule](https://leetcode.com/problems/course-schedule/)
