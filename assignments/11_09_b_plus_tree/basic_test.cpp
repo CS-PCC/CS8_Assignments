@@ -31,7 +31,7 @@ bool test_b_plus_tree(bool debug=false)
   cout << "tree preorder:  |" << bt.pre_order() << endl;
   cout << "tree postorder: |" << bt.post_order() << endl;
   cout << "tree size is : " << bt.size() << endl;
-  cout << "tree items is: " << bt.n_items() << endl;
+  cout << "tree items is: " << bt.count() << endl;
   cout << "tree is empty: " << boolalpha << bt.empty() << endl;
   cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
@@ -45,7 +45,7 @@ bool test_b_plus_tree(bool debug=false)
   cout << "tree preorder:  |" << bt.pre_order() << endl;
   cout << "tree postorder: |" << bt.post_order() << endl;
   cout << "tree size is : " << bt.size() << endl;
-  cout << "tree items is: " << bt.n_items() << endl;
+  cout << "tree items is: " << bt.count() << endl;
   cout << "tree is empty: " << boolalpha << bt.empty() << endl;
   cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
@@ -53,6 +53,7 @@ bool test_b_plus_tree(bool debug=false)
   cout << "bt.contains(20): " << boolalpha << bt.contains(20) << endl;
   cout << "bt.contains(0): " << boolalpha << bt.contains(0) << endl;
   cout << "bt.find(20): " << *(bt.find(20)) << endl;
+  cout << "bt.get(20) : " << bt.get(20) << endl;
 
   cout << "\nfind nonexisting key: " << endl;
   cout << "bt.find(0): ";
@@ -67,7 +68,7 @@ bool test_b_plus_tree(bool debug=false)
   cout << "tree preorder:  |" << bt.pre_order() << endl;
   cout << "tree postorder: |" << bt.post_order() << endl;
   cout << "tree size is : " << bt.size() << endl;
-  cout << "tree items is: " << bt.n_items() << endl;
+  cout << "tree items is: " << bt.count() << endl;
   cout << "tree is empty: " << boolalpha << bt.empty() << endl;
   cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
@@ -79,7 +80,7 @@ bool test_b_plus_tree(bool debug=false)
   cout << "tree preorder:  |" << bt.pre_order() << endl;
   cout << "tree postorder: |" << bt.post_order() << endl;
   cout << "tree size is : " << bt.size() << endl;
-  cout << "tree items is: " << bt.n_items() << endl;
+  cout << "tree items is: " << bt.count() << endl;
   cout << "tree is empty: " << boolalpha << bt.empty() << endl;
   cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
@@ -91,7 +92,7 @@ bool test_b_plus_tree(bool debug=false)
   cout << "tree preorder:  |" << bt.pre_order() << endl;
   cout << "tree postorder: |" << bt.post_order() << endl;
   cout << "tree size is : " << bt.size() << endl;
-  cout << "tree items is: " << bt.n_items() << endl;
+  cout << "tree items is: " << bt.count() << endl;
   cout << "tree is empty: " << boolalpha << bt.empty() << endl;
   cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
@@ -127,7 +128,7 @@ bool test_b_plus_tree(bool debug=false)
   cout << "tree preorder:  |" << bt.pre_order() << endl;
   cout << "tree postorder: |" << bt.post_order() << endl;
   cout << "tree size is : " << bt.size() << endl;
-  cout << "tree items is: " << bt.n_items() << endl;
+  cout << "tree items is: " << bt.count() << endl;
   cout << "tree is empty: " << boolalpha << bt.empty() << endl;
   cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
   cout << endl;
@@ -142,7 +143,7 @@ bool test_b_plus_tree(bool debug=false)
     cout << "tree preorder:  |" << bt.pre_order() << endl;
     cout << "tree postorder: |" << bt.post_order() << endl;
     cout << "tree size is : " << bt.size() << endl;
-    cout << "tree items is: " << bt.n_items() << endl;
+    cout << "tree items is: " << bt.count() << endl;
     cout << "tree is empty: " << boolalpha << bt.empty() << endl;
     cout << "tree is valid: " << boolalpha << bt.is_valid() << endl;
     cout << DASH << endl;
@@ -212,7 +213,7 @@ tree in order:  |20|43|43|69|96|96|100|
 tree preorder:  |43|20|96|43|69|96|100|
 tree postorder: |20|43|69|43|96|100|96|
 tree size is : 5
-tree items is: 13
+tree items is: 7
 tree is empty: false
 tree is valid: true
 
@@ -255,13 +256,14 @@ tree in order:  |10|20|43|43|50|50|69|96|96|100|100|200|
 tree preorder:  |50|43|10|20|43|96|50|69|100|96|100|200|
 tree postorder: |10|20|43|43|50|69|96|96|100|200|100|50|
 tree size is : 8
-tree items is: 14
+tree items is: 12
 tree is empty: false
 tree is valid: true
 
 bt.contains(20): true
 bt.contains(0): false
 bt.find(20): 20
+bt.get(20) : 20
 
 find nonexisting key: 
 bt.find(0): iterator: NULL, key_ptr: 0
@@ -313,7 +315,7 @@ tree in order:  |10|12|12|20|43|43|50|50|69|96|96|100|100|200|
 tree preorder:  |50|12|10|43|12|20|43|96|50|69|100|96|100|200|
 tree postorder: |10|12|20|12|43|43|50|69|96|96|100|200|100|50|
 tree size is : 9
-tree items is: 15
+tree items is: 14
 tree is empty: false
 tree is valid: true
 
@@ -368,7 +370,7 @@ tree in order:  |10|12|12|20|43|43|50|50|69|96|96|100|100|200|200|300|
 tree preorder:  |50|12|10|43|12|20|43|100|96|50|69|96|200|100|200|300|
 tree postorder: |10|12|20|12|43|43|50|69|96|96|50|100|200|300|200|100|
 tree size is : 10
-tree items is: 21
+tree items is: 16
 tree is empty: false
 tree is valid: true
 
@@ -428,7 +430,7 @@ tree in order:  |10|12|12|20|43|43|50|50|55|55|69|96|96|100|100|200|200|300|
 tree preorder:  |50|12|10|43|12|20|43|100|55|50|96|55|69|96|200|100|200|300|
 tree postorder: |10|12|20|12|43|43|50|55|69|55|96|96|50|100|200|300|200|100|
 tree size is : 11
-tree items is: 23
+tree items is: 18
 tree is empty: false
 tree is valid: true
 
@@ -558,7 +560,7 @@ tree in order:  |10|12|12|20|43|43|50|50|55|55|69|96|96|100|100|105|105|110|110|
 tree preorder:  |100|50|12|10|43|12|20|43|55|50|96|55|69|96|120|110|105|100|105|115|110|115|130|125|120|125|140|135|130|135|200|140|145|200|300|
 tree postorder: |10|12|20|12|43|43|50|55|69|55|96|96|50|100|105|105|110|115|115|110|100|120|125|125|130|135|135|130|140|145|200|300|200|140|120|
 tree size is : 20
-tree items is: 42
+tree items is: 35
 tree is empty: false
 tree is valid: true
 
@@ -665,7 +667,7 @@ tree in order:  |10|12|12|20|43|43|50|50|55|55|69|96|96|100|100|105|105|110|110|
 tree preorder:  |100|50|12|10|43|12|20|43|55|50|96|55|69|96|125|110|105|100|105|115|110|115|140|130|125|135|130|135|200|140|145|200|300|
 tree postorder: |10|12|20|12|43|43|50|55|69|55|96|96|50|100|105|105|110|115|115|110|100|125|130|130|135|135|140|145|200|300|200|140|125|
 tree size is : 19
-tree items is: 39
+tree items is: 33
 tree is empty: false
 tree is valid: true
 
@@ -765,7 +767,7 @@ tree in order:  |10|12|12|20|43|43|50|50|55|55|69|96|96|105|105|110|110|115|115|
 tree preorder:  |125|50|12|10|43|12|20|43|105|55|50|96|55|69|96|110|105|115|110|115|140|130|125|135|130|135|200|140|145|200|300|
 tree postorder: |10|12|20|12|43|43|50|55|69|55|96|96|50|105|110|110|115|115|105|125|130|130|135|135|140|145|200|300|200|140|125|
 tree size is : 18
-tree items is: 26
+tree items is: 31
 tree is empty: false
 tree is valid: true
 
@@ -860,7 +862,7 @@ tree in order:  |10|12|12|20|43|43|50|50|55|55|69|96|96|105|105|110|110|115|115|
 tree preorder:  |130|50|12|10|43|12|20|43|105|55|50|96|55|69|96|110|105|115|110|115|140|135|130|135|200|140|145|200|300|
 tree postorder: |10|12|20|12|43|43|50|55|69|55|96|96|50|105|110|110|115|115|105|130|135|135|140|145|200|300|200|140|130|
 tree size is : 17
-tree items is: 24
+tree items is: 29
 tree is empty: false
 tree is valid: true
 
@@ -954,7 +956,7 @@ tree in order:  |10|12|12|20|43|43|50|50|55|55|69|96|96|105|105|110|110|115|115|
 tree preorder:  |130|50|12|10|43|12|20|43|105|55|50|96|55|69|96|110|105|115|110|115|145|135|130|135|200|145|200|300|
 tree postorder: |10|12|20|12|43|43|50|55|69|55|96|96|50|105|110|110|115|115|105|130|135|135|145|200|300|200|145|130|
 tree size is : 16
-tree items is: 22
+tree items is: 28
 tree is empty: false
 tree is valid: true
 
@@ -1043,7 +1045,7 @@ tree in order:  |10|12|12|20|43|43|50|50|55|55|69|96|96|105|105|115|115|130|130|
 tree preorder:  |130|50|12|10|43|12|20|43|105|55|50|96|55|69|96|115|105|115|145|135|130|135|200|145|200|300|
 tree postorder: |10|12|20|12|43|43|50|55|69|55|96|96|50|105|115|115|105|130|135|135|145|200|300|200|145|130|
 tree size is : 15
-tree items is: 21
+tree items is: 26
 tree is empty: false
 tree is valid: true
 
@@ -1053,10 +1055,10 @@ remove on empty: false
 
 --------------------------------------------------
 
-[       OK ] BASIC_TEST.TestBPlusTree (5 ms)
-[----------] 1 test from BASIC_TEST (5 ms total)
+[       OK ] BASIC_TEST.TestBPlusTree (38 ms)
+[----------] 1 test from BASIC_TEST (38 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (5 ms total)
+[==========] 1 test from 1 test suite ran. (39 ms total)
 [  PASSED  ] 1 test.
 */
