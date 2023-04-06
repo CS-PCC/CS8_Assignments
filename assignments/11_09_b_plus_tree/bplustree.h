@@ -47,10 +47,10 @@
 //     Postcondition: Returns a reference of entry.
 //
 //   std::size_t size()
-//     Postcondition: Returns count the number of leaves in the tree
+//     Postcondition: Returns the total number of items in the leaves.
 //
 //   std::size_t size_list()
-//     Postcondition: Returns count the total number of value in the tree
+//     Postcondition: Returns the total number of items (in the list) in the tree
 //
 //   Iterator lower_bound(const Item& key)
 //     Postcondition: Returns an iterator pointing to the first element in the
@@ -75,7 +75,7 @@
 //     Postcondition: Returns a reference of entry.
 //
 //   std::size_t count() const
-//     Postcondition: Returns count the number of nodes in the tree
+//     Postcondition: Returns the total number of items in the tree
 //
 //   bool empty() const
 //     Postcondition: Returns true if the BPlusTree is empty; otherwise returns false.
