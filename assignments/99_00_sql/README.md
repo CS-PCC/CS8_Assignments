@@ -131,5 +131,5 @@ You are responsible for implementing the behavior described in the spec.
 
 ## Reference
 
-- [More things you can implement](http://sp17.datastructur.es/materials/proj/proj2/proj2.html)
+- [Implement more functionalities](http://sp17.datastructur.es/materials/proj/proj2/proj2.html)
 - [SQL Tutorial](https://www.w3schools.com/sql/)
