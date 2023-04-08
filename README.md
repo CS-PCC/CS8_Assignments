@@ -52,3 +52,7 @@
 ## Chapter 15: Graphs
 
 - [`15_20_graphs`](assignments/15_20_graphs/)
+
+## Final Project
+
+- [`99_99_sql`](assignments/99_99_sql/)
