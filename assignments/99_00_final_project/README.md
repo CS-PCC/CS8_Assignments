@@ -127,7 +127,7 @@ You are responsible for implementing the behavior described in the spec.
 2. [`99_02_table`](99_02_table/)
 3. [`99_03_tokenizer`](99_03_tokenizer/)
 4. [`99_04_parser`](99_04_parser/)
-5. [`99_99_sql`](99_99_sql/)
+5. [`99_05_sql`](99_05_sql/)
 
 ## Reference
 

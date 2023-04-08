@@ -55,4 +55,4 @@
 
 ## Final Project
 
-- [`99_99_sql`](assignments/99_99_sql/)
+- [`99_00_sql`](assignments/99_00_sql/)
