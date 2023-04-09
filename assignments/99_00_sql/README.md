@@ -109,22 +109,7 @@ It is an error to compare strings to either int or float types, but it is valid 
 
 - and
 - or
-
-## Special Values
-
-There are two different kinds of special values you'll have to handle in your implementation. These are NaN and NOVALUE.
-
-### NaN
-
-If a column expression results in a divide by zero error, the value in that row should be the string "NaN", unquoted. A NaN value has the same type as the column it exists in.
-
-Any arithmetic operation that has a NaN value as one of its operands should produce a NaN. Any comparison operators involving NaN should treat it as being larger than all other values except itself, to which it should be equal. NaN may not be given as a literal in a column expression or an insert. You do not have to handle this.
-
-### NOVALUE
-
-The special value NOVALUE is exactly what it sounds like, it represents the absence of a value. The value present in a database row should be the string "NOVALUE", unquoted. A NOVALUE value has the same type as the column it exists in.
-
-Any arithmetic operation that has a NOVALUE as one of its operands should treat it as the zero value for the column type. The zero values for strings, ints and floats are '', 0 and 0.0, respectively. The one exception to this is when both operands to arithmetic are NOVALUE, in this case the result should also be NOVALUE. Any comparison operation that has a NOVALUE as one of its operands should evaluate to false. NOVALUE may not be given as a literal in a column expression. You do not have to handle this.
+- not
 
 ## Your Task
 
