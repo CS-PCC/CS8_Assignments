@@ -23,7 +23,7 @@ There are several commands you'll have to support in your database implementatio
 create table <TABLE_NAME> fields <FIELD_NAME> [, <FIELD_NAME> ...]
 
 e.g.
-create table employee fields last, first, department
+create table employee fields last_name, first_name, department
 ```
 
 Create a table with the given name. The names and types of the columns of the new table are supplied in a parenthesized list, in order. This defines the column order for this table.
@@ -39,6 +39,7 @@ insert into <TABLE_NAME> values <VALUE> [, <VALUE> ...]
 
 e.g.
 insert into employee values Blow, Joe, CS
+insert into employee values "Jackson", Billy, Math
 ```
 
 Insert the given row (the list of literals) to the named table. The table must already be in the DB and the provided values must match the columns of that table. If a provided value cannot be parsed into the type of the column it is listed in, it is an error. The given row is appended to the table, becoming the last row in its row order.
@@ -57,7 +58,13 @@ from <TABLE_NAME>
 where <FIELD_NAME> <RELATIONAL_OPERATOR> <VALUE> [<LOGICAL_OPERATOR> <FIELD_NAME> <RELATIONAL_OPERATOR> <VALUE> ...]
 
 e.g.
-select * from student where lname = Yang or major = CS and age < 23
+select first_name, last_name from student
+select * from student
+select * from student where last_name
+select * from student where age < 23
+select * from student where last_name = Yang and age < 23
+select * from student where (last_name = Yang or major = CS) and age < 23
+select * from student where not last_name = Yang and not major = CS
 ```
 
 The result of a select statement is a new table that has been formed from the join of the given table(s), filtered by the conditional statement(s), and selected from with the column expression(s). The order in which these operations happen is up to your implementation, as long as the output is correct. The joining of tables is optional, i.e. selecting from a single table is valid. The conditional statements are also optional.
