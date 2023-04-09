@@ -4,14 +4,14 @@
 
 In this project, you'll be building a small version of what is called a relational database management system (DBMS), as well as a DSL (Domain Specific Language) with which a user can interact with your database. The language you will be implementing is similar to the declarative programming language SQL, which is used in the real world to interact with and query databases, large or small. Below is an example of a table.
 
-| Lastname string | Firstname string | TeamName string |
-| :-------------- | :--------------- | :-------------- |
-| Lee | Maurice | Mets |
-| Lee | Maurice | Steelers |
-| Ray | Mitas | Patriots |
-| Hwang | Alex | Cloud9 |
-| Rulison | Jared | EnVyUs |
-| Fang | Vivian | Golden Bears |
+| last_name | first_name | major |
+| :-------- | :--------- | :---- |
+| Lee | Maurice | Math |
+| Lee | Maurice | CS |
+| Ray | Mitas | Music |
+| Hwang | Alex | Business |
+| Rulison | Jared | Management |
+| Fang | Vivian | Music |
 
 ## Commands
 
@@ -23,7 +23,7 @@ There are several commands you'll have to support in your database implementatio
 create table <TABLE_NAME> fields <FIELD_NAME> [, <FIELD_NAME> ...]
 
 e.g.
-create table employee fields last_name, first_name, department
+create table employee fields last_name, first_name, major
 ```
 
 Create a table with the given name. The names and types of the columns of the new table are supplied in a parenthesized list, in order. This defines the column order for this table.
