@@ -115,7 +115,7 @@ It is an error to compare strings to either int or float types, but it is valid 
 
 You are responsible for implementing the behavior described in the spec.
 
-1. [`99_01_binary_file`](99_01_binary_file/)
+1. [`99_01_binary_files`](99_01_binary_files/)
 2. [`99_02_table`](99_02_table/)
 3. [`99_03_tokenizer`](99_03_tokenizer/)
 4. [`99_04_parser`](99_04_parser/)
