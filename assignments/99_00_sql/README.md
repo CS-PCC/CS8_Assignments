@@ -121,6 +121,8 @@ You are responsible for implementing the behavior described in the spec.
 4. [`99_04_parser`](99_04_parser/)
 5. [`99_05_sql`](99_05_sql/)
 
+Your code must be fully documented.
+
 ## Reference
 
 - [Implement more functionalities](http://sp17.datastructur.es/materials/proj/proj2/proj2.html)
