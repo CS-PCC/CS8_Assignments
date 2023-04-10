@@ -111,7 +111,7 @@ It is an error to compare strings to either int or float types, but it is valid 
 - or
 - not
 
-## Your Task
+## Tasks
 
 You are responsible for implementing the behavior described in the spec.
 
