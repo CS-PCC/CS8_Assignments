@@ -67,13 +67,13 @@ select * from student where (last_name = Yang or major = CS) and age < 23
 select * from student where not last_name = Yang and not major = CS
 ```
 
-The result of a select statement is a new table that has been formed from the join of the given table(s), filtered by the conditional statement(s), and selected from with the column expression(s). The order in which these operations happen is up to your implementation, as long as the output is correct. The joining of tables is optional, i.e. selecting from a single table is valid. The conditional statements are also optional.
+The result of a select statement is a new table that has been formed from the join of the given table(s), filtered by the conditional statement(s), and selected from with the column expression(s). The order in which these operations happen is up to your implementation, as long as the output is correct. The joining of tables is optional, i.e. selecting from a single table is valid. The conditional statements are optional in grammar.
 
 The order of the columns in the new table is defined by the order they are listed in the select. In the case that all columns are selected (with the * operator), the order is defined by the column order for the join.
 
 It is an error to write a select statement that involved no columns of the listed tables.
 
-Select should return the String representation of the produced table, or an appropriate error message otherwise.
+Select should return the Table object of the produced table, or an appropriate error message otherwise.
 
 ## A Note on Whitespace
 
