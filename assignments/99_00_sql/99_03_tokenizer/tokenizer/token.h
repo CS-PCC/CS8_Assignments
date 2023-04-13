@@ -1,5 +1,5 @@
-#ifndef TOKENIZER_TOKEN_H
-#define TOKENIZER_TOKEN_H
+#ifndef STRING_TOKEN_H
+#define STRING_TOKEN_H
 
 #include <iostream>
 #include <string>
@@ -8,12 +8,12 @@
 
 using namespace std;
 
-class Token
+class SToken
 {
 public:
   // Constructors
-  Token();
-  Token(string str, int type);
+  SToken();
+  SToken(string str, int type);
   // return the type of the token
   int type() const { return _type; }
   // return the token string
@@ -21,7 +21,7 @@ public:
   // return the type of the token as a string
   string token_type() const;
   // overload the << operator
-  friend ostream& operator <<(ostream& outs, const Token& t) {
+  friend ostream& operator <<(ostream& outs, const SToken& t) {
     outs << "|" << t.token_str() << '|'; 
     return outs;
   }
@@ -32,4 +32,4 @@ private:
   int _type;
 };
 
-#endif // TOKENIZER_TOKEN_H
+#endif // STRING_TOKEN_H

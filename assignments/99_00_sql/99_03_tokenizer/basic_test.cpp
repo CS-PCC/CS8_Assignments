@@ -25,7 +25,7 @@ bool test_s_tokenize(bool debug = false)
   char s[] = "So, it was the night of october 17th. pi was still 3.14. sigh! 2.";
   cout << "\nTokenizing: " << s << endl << endl;
   STokenizer stk(s);
-  Token t;
+  SToken t;
 
   // process the first token
   stk >> t;
@@ -33,7 +33,7 @@ bool test_s_tokenize(bool debug = false)
   while(stk.more()){
     // process token here...
     cout << setw(10) << t.token_type() << setw(10) << t << endl;
-    t = Token();
+    t = SToken();
     stk >> t;
   }
   
@@ -51,7 +51,7 @@ bool test_f_tokenize(bool debug = false)
   
   // initialization
   FTokenizer ftk("solitude_mini.txt");
-  Token t;
+  SToken t;
   int token_count = 0;
 
   // process the first token

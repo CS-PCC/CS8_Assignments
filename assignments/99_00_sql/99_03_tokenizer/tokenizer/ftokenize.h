@@ -16,11 +16,11 @@ public:
   // Constructor
   FTokenizer(char* fname);
   // Extract one token (very similar to the way cin >> works)
-  Token next_token();
+  SToken next_token();
   bool more() { return _more; }        //returns the current value of _more
   int pos() { return _pos; }           //returns the value of _pos
   int block_pos() { return _blockPos; }//returns the value of _blockPos
-  friend FTokenizer& operator >> (FTokenizer& f, Token& t);
+  friend FTokenizer& operator >> (FTokenizer& f, SToken& t);
 private:
   bool get_new_block(); //gets the new block from the file
   std::ifstream _f;     //file being tokenized
