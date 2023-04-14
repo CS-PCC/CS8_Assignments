@@ -10,11 +10,6 @@ const char DIGITS[] = "0123456789";
 const char OPERATORS[] = "><=!+-%&|";
 const char SPACES[] = {' ', '\t', '\n', '\0'};
 const char PUNC[] = "?.,:;'`~!";
-const int START_DOUBLE = 0;
-const int START_SPACES = 4;
-const int START_ALPHA = 6;
-const int START_OPERATOR = 20;
-const int START_PUNC = 10;
 
 // token types
 const int TOKEN_NUMBER = 1;
