@@ -13,9 +13,7 @@ class SToken
 public:
   // Constructors
   SToken();
-  SToken(string str, int type);
-  // return the type of the token
-  int type() const { return _type; }
+  SToken(string str, STRING_TOKEN_TYPES type);
   // return the token string
   string token_str() const { return _token; }
   // return the type of the token as a string
@@ -29,7 +27,7 @@ private:
   // the token string
   string _token;
   // the type of the token
-  int _type;
+  STRING_TOKEN_TYPES _type;
 };
 
 #endif // STRING_TOKEN_H

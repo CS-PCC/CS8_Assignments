@@ -12,12 +12,14 @@ const char SPACES[] = {' ', '\t', '\n', '\0'};
 const char PUNC[] = "?.,:;'`~!";
 
 // token types
-const int TOKEN_NUMBER = 1;
-const int TOKEN_ALPHA = 2;
-const int TOKEN_SPACE = 3;
-const int TOKEN_OPERATOR = 4;
-const int TOKEN_PUNC = 5;
-
-const int TOKEN_UNKNOWN = -1;
+enum STRING_TOKEN_TYPES
+{
+  TOKEN_NUMBER,
+  TOKEN_ALPHA,
+  TOKEN_SPACE,
+  TOKEN_OPERATOR,
+  TOKEN_PUNC,
+  TOKEN_UNKNOWN = -1
+};
 
 #endif // TOKENIZER_CONSTANTS_H

@@ -24,8 +24,12 @@ public:
 private:
   // create table for all the tokens we will recognize (e.g. doubles, words, etc.)
   void make_table(int _table[][MAX_COLUMNS]);
+  // print the table, debug use only
+  void print_table(int _table[][MAX_COLUMNS]);
   // extract the longest string that match one of the acceptable token types
   bool get_token(int start_state, SToken& token);
+  // return the type of the token
+  STRING_TOKEN_TYPES token_type(int state) const;
   char _buffer[MAX_BUFFER];       //input string
   int _pos;                       //current position in the string
   static int _table[MAX_ROWS][MAX_COLUMNS];
