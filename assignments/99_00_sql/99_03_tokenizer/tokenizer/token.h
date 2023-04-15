@@ -14,6 +14,8 @@ public:
   // Constructors
   SToken();
   SToken(string str, STRING_TOKEN_TYPES type);
+  // return the type of the token
+  STRING_TOKEN_TYPES type() const { return _type; }
   // return the token string
   string token_str() const { return _token; }
   // return the type of the token as a string
