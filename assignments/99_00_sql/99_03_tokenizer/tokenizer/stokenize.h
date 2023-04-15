@@ -14,13 +14,13 @@ class STokenizer
 public:
   // Constructors
   STokenizer();
-  STokenizer(char str[]);
+  STokenizer(const char str[]);
   bool done();            //true: there are no more tokens
   bool more();            //true: there are more tokens
   // extract one token (very similar to the way cin >> works)
   friend STokenizer& operator >> (STokenizer& s, SToken& t);
   // set a new string as the input string
-  void set_string(char str[]);
+  void set_string(const char str[]);
 private:
   // create table for all the tokens we will recognize (e.g. doubles, words, etc.)
   void make_table(int _table[][MAX_COLUMNS]);
