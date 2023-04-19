@@ -116,9 +116,9 @@ It is an error to compare strings to either int or float types, but it is valid 
 You are responsible for implementing the behavior described in the spec.
 
 1. [`99_01_binary_files`](99_01_binary_files/)
-2. [`99_02_table`](99_02_table/)
-3. [`99_03_tokenizer`](99_03_tokenizer/)
-4. [`99_04_parser`](99_04_parser/)
+2. [`99_02_tokenizer`](99_02_tokenizer/)
+3. [`99_03_parser`](99_03_parser/)
+4. [`99_04_table`](99_04_table/)
 5. [`99_05_sql`](99_05_sql/)
 
 Your code must be fully documented.

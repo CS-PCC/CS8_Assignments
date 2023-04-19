@@ -1,6 +1,6 @@
 # State Machine Tokenizer
 
-- Accept [99_03_tokenizer](https://classroom.github.com/a/1e-Ku71L)
+- Accept [99_02_tokenizer](https://classroom.github.com/a/1e-Ku71L)
 - Get [basic_test.cpp](basic_test.cpp)
 
 ---
