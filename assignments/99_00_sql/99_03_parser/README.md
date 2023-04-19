@@ -5,7 +5,7 @@
 
 ---
 
-The SQL commands are store in the `string` type variable. `Parser` class can save each token in a `Map` object.
+The SQL commands are store in the `string` type variable. `Parser` class can save each token into a `MultiMap` object.
 
 For example:
 
@@ -21,4 +21,4 @@ table_name :    student
 ## Tasks
 
 1. Modify `tokenizer` class to create a state machine for SQL commands.
-2. Implement [parser](parser.h) class to save tokens to map.
+2. Implement [Parser](parser.h) class to save tokens to MultiMap.
