@@ -21,9 +21,11 @@ public:
   int pos() { return _pos; }           //returns the value of _pos
   int block_pos() { return _blockPos; }//returns the value of _blockPos
   friend FTokenizer& operator >> (FTokenizer& f, SToken& t);
+
   // =====================================
   // TODO: Add more methods here if needed
   // =====================================
+
 private:
   bool get_new_block(); //gets the new block from the file
   std::ifstream _f;     //file being tokenized
@@ -33,6 +35,9 @@ private:
   bool _more;           //false if last token of the last block
                         //  has been processed and now we are at
                         //  the end of the last block.
+  // =====================================
+  // TODO: Add more methods here if needed
+  // =====================================
 };
 
 #endif //FTOKENIZE_H

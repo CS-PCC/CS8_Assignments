@@ -25,14 +25,21 @@ public:
     outs << "|" << t.token_str() << '|'; 
     return outs;
   }
+
   // =====================================
   // TODO: Add more methods here if needed
   // =====================================
+
 private:
   // the token string
   string _token;
   // the type of the token
   STRING_TOKEN_TYPES _type;
+
+  // =====================================
+  // TODO: Add more methods here if needed
+  // =====================================
+  
 };
 
 #endif // STRING_TOKEN_H

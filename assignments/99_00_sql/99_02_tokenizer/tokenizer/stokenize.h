@@ -21,9 +21,11 @@ public:
   friend STokenizer& operator >> (STokenizer& s, SToken& t);
   // set a new string as the input string
   void set_string(const char str[]);
+
   // =====================================
   // TODO: Add more methods here if needed
   // =====================================
+  
 private:
   // create table for all the tokens we will recognize (e.g. doubles, words, etc.)
   void make_table(int _table[][MAX_COLUMNS]);
@@ -34,6 +36,11 @@ private:
   char _buffer[MAX_BUFFER];       //input string
   int _pos;                       //current position in the string
   static int _table[MAX_ROWS][MAX_COLUMNS];
+
+  // =====================================
+  // TODO: Add more methods here if needed
+  // =====================================
+  
 };
 
 #endif // STOKENIZE_H

@@ -22,4 +22,8 @@ enum STRING_TOKEN_TYPES
   TOKEN_UNKNOWN = -1
 };
 
+// =====================================
+// TODO: Add more methods here if needed
+// =====================================
+
 #endif // TOKENIZER_CONSTANTS_H

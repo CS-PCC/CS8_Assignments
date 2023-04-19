@@ -50,6 +50,11 @@ private:
   int recno;
   // The record vector
   vector<char*> _records;
+
+  // =====================================
+  // TODO: Add more methods here if needed
+  // =====================================
+  
 };
 
 #endif
