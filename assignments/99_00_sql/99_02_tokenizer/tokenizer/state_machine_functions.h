@@ -37,4 +37,8 @@ void print_table(int _table[][MAX_COLUMNS]);
 //       ^
 void show_string(char s[], int _pos);
 
+// =====================================
+// TODO: Add more methods here if needed
+// =====================================
+
 #endif // STATE_MACHINE_FUNCTIONS_H

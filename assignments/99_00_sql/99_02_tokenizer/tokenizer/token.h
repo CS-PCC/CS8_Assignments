@@ -25,6 +25,9 @@ public:
     outs << "|" << t.token_str() << '|'; 
     return outs;
   }
+  // =====================================
+  // TODO: Add more methods here if needed
+  // =====================================
 private:
   // the token string
   string _token;
