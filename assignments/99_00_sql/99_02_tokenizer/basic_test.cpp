@@ -22,7 +22,7 @@ using namespace std;
 bool test_s_tokenize(bool debug = false)
 {
   // initialization
-  char s[] = "So, it was the night of october 17th. pi was still 3.14. sigh! 2.";
+  char s[] = "So, a3a   050 the 3.n of \"october\" 17th. 3. pi +-+was <== \"sti ll\" 3.14. sigh!!! 2.";
   cout << "\nTokenizing: " << s << endl << endl;
   STokenizer stk(s);
   SToken t;
@@ -30,7 +30,7 @@ bool test_s_tokenize(bool debug = false)
   // process the first token
   stk >> t;
   // keep precessing token
-  while(stk.more()){
+  while(stk.more()) {
     // process token here...
     cout << setw(10) << t.token_type() << setw(10) << t << endl;
     t = SToken();
@@ -50,7 +50,8 @@ bool test_f_tokenize(bool debug = false)
   //****************************
   
   // initialization
-  FTokenizer ftk("solitude_mini.txt");
+  char file_name[] = "solitude_mini.txt"; 
+  FTokenizer ftk(file_name);
   SToken t;
   int token_count = 0;
 
@@ -120,38 +121,56 @@ includes
 [----------] 2 tests from TEST_TOKENIZER
 [ RUN      ] TEST_TOKENIZER.TestSTokenize
 
-Tokenizing: So, it was the night of october 17th. pi was still 3.14. sigh! 2.
+Tokenizing: So, a3a   050 the 3.n of "october" 17th. 3. pi +-+was <== "sti ll" 3.14. sigh!!! 2.
 
      ALPHA         |So|
       PUNC         |,|
      SPACE         | |
-     ALPHA         |it|
+     ALPHA         |a|
+    NUMBER         |3|
+     ALPHA         |a|
      SPACE         | |
-     ALPHA         |was|
+     SPACE         | |
+     SPACE         | |
+    NUMBER         |050|
      SPACE         | |
      ALPHA         |the|
      SPACE         | |
-     ALPHA         |night|
+    NUMBER         |3|
+      PUNC         |.|
+     ALPHA         |n|
      SPACE         | |
      ALPHA         |of|
      SPACE         | |
+   UNKNOWN         ||
      ALPHA         |october|
+   UNKNOWN         ||
      SPACE         | |
     NUMBER         |17|
      ALPHA         |th|
       PUNC         |.|
      SPACE         | |
+    NUMBER         |3|
+      PUNC         |.|
+     SPACE         | |
      ALPHA         |pi|
      SPACE         | |
+  OPERATOR         |+-+|
      ALPHA         |was|
      SPACE         | |
-     ALPHA         |still|
+  OPERATOR         |<==|
+     SPACE         | |
+   UNKNOWN         ||
+     ALPHA         |sti|
+     SPACE         | |
+     ALPHA         |ll|
+   UNKNOWN         ||
      SPACE         | |
     NUMBER         |3.14|
       PUNC         |.|
      SPACE         | |
      ALPHA         |sigh|
-      PUNC         |!|
+      PUNC         |!!!|
      SPACE         | |
     NUMBER         |2|
       PUNC         |.|
