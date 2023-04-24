@@ -5,7 +5,7 @@
 
 ---
 
-Table class is able to save and read data to binary file when receive table information as parameters, and display selected table.
+The table class manages a single table’s field list and data. it will provide methods for creating new tables, retrieving an existing table and responding to select queries.
 
 ## Tasks
 
@@ -15,4 +15,4 @@ Read [Shunting Yard and RPN](https://github.com/CS-PCC/CS3A_Assignments/tree/mas
 
 ### Table Class
 
-Implement [Table](table.h) class.
+Implement [Table](table.h) class to save and read data to binary file when receive table information as parameters, and display selected table.
