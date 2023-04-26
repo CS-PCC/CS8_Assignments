@@ -16,7 +16,7 @@ bool file_exists(const char filename[])
   return true;
 }
 
-void open_fileRW(fstream& f, const char filename[]) throw(char*)
+void open_fileRW(fstream& f, const char filename[])
 {
   const bool debug = false;
   // Opening a nonexistent file for in|out|app causes a fail()
@@ -26,7 +26,6 @@ void open_fileRW(fstream& f, const char filename[]) throw(char*)
     f.open(filename, std::fstream::out | std::fstream::binary);
     if (f.fail()) {
       cout << "FAILED: open_fileRW(): File does NOT exist: " << filename << endl;
-      throw("open_fileRW() failed to open");
     }
     else{
       if (debug) cout << "open_fileRW(): File created successfully: " << filename << endl;
@@ -37,7 +36,6 @@ void open_fileRW(fstream& f, const char filename[]) throw(char*)
     f.open(filename, std::fstream::in | std::fstream::out| std::fstream::binary);
     if (f.fail()) {
       cout << "FAILED: open_fileRW(): File does NOT exist: " << filename << endl;
-      throw("open_fileRW() failed to open");
     }
   }
   // Keep opening the file for writing
@@ -49,7 +47,6 @@ void open_fileW(fstream& f, const char filename[])
   f.open (filename, std::fstream::out | std::fstream::binary );
   if (f.fail()) {
     cout << "FAILED: open_fileW(): File does NOT exist: " << filename << endl;
-    throw("open_fileW() failed to open");
   }
   // Keep opening the file for writing
 }
