@@ -5,6 +5,7 @@
 #include <iomanip>    // Provides std::setw
 #include <cassert>    // Provides assert
 #include <cstdlib>    // Provides size_t
+#include <vector>     // provides std::vector
 
 // Declaration
 
@@ -72,6 +73,22 @@ bool is_gt(const T data[], std::size_t n, const T& item)
     if (item <= data[i]) return false;
   }
   return true;
+}
+
+template <typename T>
+std::ostream& operator <<(std::ostream& outs, const std::vector<T>& list) //print vector list
+{
+  for (size_t i = 0; t < list.size(); i++)
+  {
+    outs << list[i] << ((i >= list.size() - 1) ? ' ' : ' ' );
+  }
+}
+
+template <typename T>
+std::vector<T>& operator +=(std::vector<T>& list, const T& addme) //list.push_back addme
+{
+  list.push_back(addme);
+  return list;
 }
 
 // TODO
