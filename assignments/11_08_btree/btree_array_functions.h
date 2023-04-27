@@ -53,8 +53,13 @@ template <class T>
 bool is_gt(const T data[], std::size_t n, const T& item);//return true if item > all data[i], otherwise return false
 
 template <class T>
-void print_array(const T data[], std::size_t n, std::size_t pos = 0);//print array data
+void print_array(const T data[], std::size_t n, std::size_t pos = 0, std::ostream& outs = std::cout);//print array data
 
+template <typename T>
+std::ostream& operator <<(std::ostream& outs, const std::vector<T>& list); //print vector list
+
+template <typename T>
+std::vector<T>& operator +=(std::vector<T>& list, const T& addme); //list.push_back addme
 
 // Definition
 
@@ -78,10 +83,7 @@ bool is_gt(const T data[], std::size_t n, const T& item)
 template <typename T>
 std::ostream& operator <<(std::ostream& outs, const std::vector<T>& list) //print vector list
 {
-  for (size_t i = 0; t < list.size(); i++)
-  {
-    outs << list[i] << ((i >= list.size() - 1) ? ' ' : ' ' );
-  }
+  print_array(list.data(), list.size(), 0, outs);
 }
 
 template <typename T>
