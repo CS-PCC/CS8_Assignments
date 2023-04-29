@@ -27,14 +27,10 @@ bool test_s_tokenize(bool debug = false)
   STokenizer stk(s);
   SToken t;
 
-  // process the first token
-  stk >> t;
-  // keep precessing token
+  // keep precessing tokens until there are no more
   while(stk.more()) {
-    // process token here...
-    cout << setw(10) << t.token_type() << setw(10) << t << endl;
-    t = SToken();
     stk >> t;
+    cout << setw(10) << t.token_type() << setw(10) << t << endl;
   }
   
   return true;
@@ -50,25 +46,22 @@ bool test_f_tokenize(bool debug = false)
   //****************************
   
   // initialization
-  char file_name[] = "solitude_mini.txt"; 
-  FTokenizer ftk(file_name);
+  FTokenizer ftk("solitude_mini.txt");
   SToken t;
-  int token_count = 0;
+  size_t token_count = 0;
 
-  // process the first token
-  ftk >> t;
-  // keep precessing token
+  // keep precessing tokens until there are no more
   while (ftk.more()) {
+    ftk >> t;
     // process token here...
-    if (t.token_type()=="ALPHA" ) {
+    if (t.token_type()=="ALPHA") {
       token_count++;
-      // if (token_count == 100) break;
       cout<<setw(10)<<right<<token_count<<setw(3)<<left<<":"
           <<setw(25)<<left<<t.token_str()<<t.token_type()<<setw(20)<<right<<strlen(t.token_str().c_str())<<endl;
     }
-    ftk >> t;
   }
   cout << "Tokens Found: " << token_count << endl;
+  EXPECT_EQ(token_count, 163);
   cout << "==========" << endl;
 
   return true;
