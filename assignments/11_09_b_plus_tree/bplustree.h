@@ -49,9 +49,6 @@
 //   std::size_t size()
 //     Postcondition: Returns the total number of items in the leaves.
 //
-//   std::size_t size_list()
-//     Postcondition: Returns the total number of items (in the list) in the tree
-//
 //   Iterator lower_bound(const Item& key)
 //     Postcondition: Returns an iterator pointing to the first element in the
 //     leaves of the BPlusTree that is not less than (i.e. greater or equal to) key.
@@ -217,7 +214,6 @@ public:
   Iterator find(const Item& entry);
   Item& get(const Item& entry);
   std::size_t size();
-  std::size_t size_list();
   Iterator lower_bound(const Item& key);
   Iterator upper_bound(const Item& key);
   Iterator begin();
