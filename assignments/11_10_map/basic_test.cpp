@@ -259,6 +259,7 @@ bool test_multimap(bool debug=false)
   cout << "Other functions" << endl;
   cout << LINE << endl;
   cout << "size():             " << mmap.size() << endl;
+  cout << "size_list():        " << mmap.size_list() << endl;
   cout << "count():            " << mmap.count() << endl;
   cout << "empty():            " << boolalpha << mmap.empty() << endl;
   cout << "mmap.at(20):        " << mmap.at(20) << endl;
@@ -474,20 +475,20 @@ find(20) != find(42)
 
 get(): 
 key: 20, value: 201
-key: 20, value: 2500
+key: 20, value: 201
 
 --------------------------------------------------
 
 lower_bound(): greater or equal to
-lower_bound(10): 20 : 2500
-lower_bound(20): 20 : 2500
+lower_bound(10): 20 : 201
+lower_bound(20): 20 : 201
 lower_bound(42): 43 : 431
 lower_bound(150): NULL
 
 ..................................................
 
 upper_bound(): greater than
-upper_bound(10): 20 : 2500
+upper_bound(10): 20 : 201
 upper_bound(20): 43 : 431
 upper_bound(42): 43 : 431
 upper_bound(150): NULL
@@ -501,8 +502,8 @@ Other functions
 size():            6
 count():           10
 empty():           false
-map.at(20):        2500
-map.get(20):       2500
+map.at(20):        201
+map.get(20):       201
 map.find(43):      43 : 431
 map.contains(45):  false
 map.contains(100): true
@@ -512,7 +513,7 @@ map.clear()        true
 
 --------------------------------------------------
 
-[       OK ] BASIC_TEST.TestMap (1 ms)
+[       OK ] BASIC_TEST.TestMap (0 ms)
 [ RUN      ] BASIC_TEST.TestMultiMap
 
 --------------------------------------------------
@@ -610,7 +611,7 @@ insert() test
         ^
         ﹇
         20 : [200 201 203]
-        10 : [100]
+        10 : [100 101]
         ﹈
 
 
@@ -697,6 +698,7 @@ Other functions
 --------------------------------------------------
 
 size():             6
+size_list():        15
 count():            10
 empty():            false
 mmap.at(20):        200 201 203 2500 
