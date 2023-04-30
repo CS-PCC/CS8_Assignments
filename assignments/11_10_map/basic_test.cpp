@@ -259,6 +259,7 @@ bool test_multimap(bool debug=false)
   cout << "Other functions" << endl;
   cout << LINE << endl;
   cout << "size():             " << mmap.size() << endl;
+  cout << "size_list():        " << mmap.size_list() << endl;
   cout << "count():            " << mmap.count() << endl;
   cout << "empty():            " << boolalpha << mmap.empty() << endl;
   cout << "mmap.at(20):        " << mmap.at(20) << endl;
@@ -697,6 +698,7 @@ Other functions
 --------------------------------------------------
 
 size():             6
+size_list():        15
 count():            10
 empty():            false
 mmap.at(20):        200 201 203 2500 
