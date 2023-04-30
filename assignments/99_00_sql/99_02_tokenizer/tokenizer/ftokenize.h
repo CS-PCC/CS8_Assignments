@@ -14,7 +14,7 @@ public:
   // Maximum number of characters in a block
   const int MAX_BLOCK = MAX_BUFFER;
   // Constructor
-  FTokenizer(char* fname);
+  FTokenizer(const char* fname);
   // Extract one token (very similar to the way cin >> works)
   SToken next_token();
   bool more() { return _more; }        //returns the current value of _more
