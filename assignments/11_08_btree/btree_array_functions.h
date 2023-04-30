@@ -84,6 +84,7 @@ template <typename T>
 std::ostream& operator <<(std::ostream& outs, const std::vector<T>& list) //print vector list
 {
   print_array(list.data(), list.size(), 0, outs);
+  return outs;
 }
 
 template <typename T>
