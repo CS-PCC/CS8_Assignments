@@ -61,7 +61,7 @@ bool test_f_tokenize(bool debug = false)
     }
   }
   cout << "Tokens Found: " << token_count << endl;
-  EXPECT_EQ(token_count, 163);
+  EXPECT_EQ(token_count, 165);
   cout << "==========" << endl;
 
   return true;
@@ -174,7 +174,7 @@ Reading ../../solitude_mini.txt
 ----- New Block ---------------------[199] bytes
 
 Chapter 1
-MANY YEARS LATER as he faced the firing squad, Colonel Aureliano Buend�a was to remember that distant afternoon when his father took him to discover ice. At that time Macondo was a villa
+MANY YEARS LATER as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon when his father took him to discover ice. At that time Macondo was a villag
          1:  Chapter                  ALPHA                   7
          2:  MANY                     ALPHA                   4
          3:  YEARS                    ALPHA                   5
@@ -209,12 +209,12 @@ MANY YEARS LATER as he faced the firing squad, Colonel Aureliano Buend�a was t
         32:  Macondo                  ALPHA                   7
         33:  was                      ALPHA                   3
         34:  a                        ALPHA                   1
-        35:  villa                    ALPHA                   5
+        35:  villag                   ALPHA                   6
 ----- New Block ---------------------[199] bytes
-ge of twenty adobe houses, built on the bank of a river of clear water that ran along a bed of polished stones, which were white and enormous, like prehistoric eggs. 
+e of twenty adobe houses, built on the bank of a river of clear water that ran along a bed of polished stones, which were white and enormous, like prehistoric eggs. 
 
-The world was so recent that ma
-        36:  ge                       ALPHA                   2
+The world was so recent that man
+        36:  e                        ALPHA                   1
         37:  of                       ALPHA                   2
         38:  twenty                   ALPHA                   6
         39:  adobe                    ALPHA                   5
@@ -251,10 +251,10 @@ The world was so recent that ma
         70:  so                       ALPHA                   2
         71:  recent                   ALPHA                   6
         72:  that                     ALPHA                   4
-        73:  ma                       ALPHA                   2
+        73:  man                      ALPHA                   3
 ----- New Block ---------------------[199] bytes
-ny things lacked names, and in order to indicate them it was necessary to point. Every year during the month of March a family of ragged gypsies would set up their tents near the village, and with a 
-        74:  ny                       ALPHA                   2
+y things lacked names, and in order to indicate them it was necessary to point. Every year during the month of March a family of ragged gypsies would set up their tents near the village, and with a g
+        74:  y                        ALPHA                   1
         75:  things                   ALPHA                   6
         76:  lacked                   ALPHA                   6
         77:  names                    ALPHA                   5
@@ -292,71 +292,66 @@ ny things lacked names, and in order to indicate them it was necessary to point.
        109:  and                      ALPHA                   3
        110:  with                     ALPHA                   4
        111:  a                        ALPHA                   1
+       112:  g                        ALPHA                   1
 ----- New Block ---------------------[199] bytes
-great uproar of pipes and kettledrums they would display new inventions. First they brought the magnet. A heavy gypsy with an untamed beard and sparrow hands, who introduced himself as Melqu�ades, 
-       112:  great                    ALPHA                   5
-       113:  uproar                   ALPHA                   6
-       114:  of                       ALPHA                   2
-       115:  pipes                    ALPHA                   5
-       116:  and                      ALPHA                   3
-       117:  kettledrums              ALPHA                  11
-       118:  they                     ALPHA                   4
-       119:  would                    ALPHA                   5
-       120:  display                  ALPHA                   7
-       121:  new                      ALPHA                   3
-       122:  inventions               ALPHA                  10
-       123:  First                    ALPHA                   5
-       124:  they                     ALPHA                   4
-       125:  brought                  ALPHA                   7
-       126:  the                      ALPHA                   3
-       127:  magnet                   ALPHA                   6
-       128:  A                        ALPHA                   1
-       129:  heavy                    ALPHA                   5
-       130:  gypsy                    ALPHA                   5
-       131:  with                     ALPHA                   4
-       132:  an                       ALPHA                   2
-       133:  untamed                  ALPHA                   7
-       134:  beard                    ALPHA                   5
-       135:  and                      ALPHA                   3
-       136:  sparrow                  ALPHA                   7
-       137:  hands                    ALPHA                   5
-       138:  who                      ALPHA                   3
-       139:  introduced               ALPHA                  10
-       140:  himself                  ALPHA                   7
-       141:  as                       ALPHA                   2
-       142:  Melqu                    ALPHA                   5
-       143:  ades                     ALPHA                   4
------ New Block ---------------------[119] bytes
-put on a bold public demonstration of what he himself called the eighth wonder of the learned alchemists of Macedonia.
+reat uproar of pipes and kettledrums they would display new inventions. First they brought the magnet. A heavy gypsy with an untamed beard and sparrow hands, who introduced himself as Melquíades, pu
+       113:  reat                     ALPHA                   4
+       114:  uproar                   ALPHA                   6
+       115:  of                       ALPHA                   2
+       116:  pipes                    ALPHA                   5
+       117:  and                      ALPHA                   3
+       118:  kettledrums              ALPHA                  11
+       119:  they                     ALPHA                   4
+       120:  would                    ALPHA                   5
+       121:  display                  ALPHA                   7
+       122:  new                      ALPHA                   3
+       123:  inventions               ALPHA                  10
+       124:  First                    ALPHA                   5
+       125:  they                     ALPHA                   4
+       126:  brought                  ALPHA                   7
+       127:  the                      ALPHA                   3
+       128:  magnet                   ALPHA                   6
+       129:  A                        ALPHA                   1
+       130:  heavy                    ALPHA                   5
+       131:  gypsy                    ALPHA                   5
+       132:  with                     ALPHA                   4
+       133:  an                       ALPHA                   2
+       134:  untamed                  ALPHA                   7
+       135:  beard                    ALPHA                   5
+       136:  and                      ALPHA                   3
+       137:  sparrow                  ALPHA                   7
+       138:  hands                    ALPHA                   5
+       139:  who                      ALPHA                   3
+       140:  introduced               ALPHA                  10
+       141:  himself                  ALPHA                   7
+       142:  as                       ALPHA                   2
+       143:  Melqu                    ALPHA                   5
+       144:  ades                     ALPHA                   4
+       145:  pu                       ALPHA                   2
+----- New Block ---------------------[117] bytes
+t on a bold public demonstration of what he himself called the eighth wonder of the learned alchemists of Macedonia.
 
-       144:  put                      ALPHA                   3
-       145:  on                       ALPHA                   2
-       146:  a                        ALPHA                   1
-       147:  bold                     ALPHA                   4
-       148:  public                   ALPHA                   6
-       149:  demonstration            ALPHA                  13
-       150:  of                       ALPHA                   2
-       151:  what                     ALPHA                   4
-       152:  he                       ALPHA                   2
-       153:  himself                  ALPHA                   7
-       154:  called                   ALPHA                   6
-       155:  the                      ALPHA                   3
-       156:  eighth                   ALPHA                   6
-       157:  wonder                   ALPHA                   6
-       158:  of                       ALPHA                   2
-       159:  the                      ALPHA                   3
-       160:  learned                  ALPHA                   7
-       161:  alchemists               ALPHA                  10
-       162:  of                       ALPHA                   2
-       163:  Macedonia                ALPHA                   9
-
-
-
-=============== END OF FILE ===============
-
-
-
-Tokens Found: 163
+       146:  t                        ALPHA                   1
+       147:  on                       ALPHA                   2
+       148:  a                        ALPHA                   1
+       149:  bold                     ALPHA                   4
+       150:  public                   ALPHA                   6
+       151:  demonstration            ALPHA                  13
+       152:  of                       ALPHA                   2
+       153:  what                     ALPHA                   4
+       154:  he                       ALPHA                   2
+       155:  himself                  ALPHA                   7
+       156:  called                   ALPHA                   6
+       157:  the                      ALPHA                   3
+       158:  eighth                   ALPHA                   6
+       159:  wonder                   ALPHA                   6
+       160:  of                       ALPHA                   2
+       161:  the                      ALPHA                   3
+       162:  learned                  ALPHA                   7
+       163:  alchemists               ALPHA                  10
+       164:  of                       ALPHA                   2
+       165:  Macedonia                ALPHA                   9
+Tokens Found: 165
 ==========
 [       OK ] TEST_TOKENIZER.TestFTokenize (3 ms)
 [----------] 2 tests from TEST_TOKENIZER (3 ms total)
